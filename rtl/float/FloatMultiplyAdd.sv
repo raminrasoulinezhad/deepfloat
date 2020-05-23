@@ -43,7 +43,6 @@ module FloatMultiplyAdd #(parameter EXP_IN_A=3,
     assert(accOut.ACC_FRAC == ACC_FRAC);
   end
 
-  //LogNumberUnpacked #(.M(M_OUT), .F(F)) c();
   Float #(.EXP(EXP_OUT), .FRAC(FRAC_OUT)) c();
 
   FloatMultiply #(.EXP_IN_A(EXP_IN_A),

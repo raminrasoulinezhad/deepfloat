@@ -45,6 +45,7 @@ module LogAddWithFloat #(parameter M=5,
   fs2f(.in(floatSigned),
        .out(float));
 
+  // Ramin: We don't have this IPcore
   // 3. Sum the linear floats
   DW_fp_add #(.sig_width(ACC_FRAC),
               .exp_width(ACC_EXP),
