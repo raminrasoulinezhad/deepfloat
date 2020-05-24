@@ -6,7 +6,7 @@ module FloatMultiplyAdd #(parameter EXP_IN_A=3,
                         parameter EXP_IN_B=3,
                         parameter FRAC_IN_B=2,
                         parameter TRAILING_BITS=2,
-                        //parameter ACC_DESIRED = 32,
+                        parameter ACC_DESIRED = 32,
                         parameter ACC_EXTRA_BIT = 8,
                         parameter OVERFLOW_DETECTION=0)
   (Float.InputIf a,
@@ -21,13 +21,15 @@ module FloatMultiplyAdd #(parameter EXP_IN_A=3,
   localparam FRAC_OUT = FRAC_IN_A + FRAC_IN_B + 1;
 
   
-  localparam ACC_FRAC_REQ      =  FRAC_OUT + ( 2**(EXP_OUT-1) ) - 2 ;  
-  localparam ACC_NON_FRAC_REQ  =  1 + ( 2**(EXP_OUT-1) );              
+  //localparam ACC_FRAC_REQ      =  FRAC_OUT + ( 2**(EXP_OUT-1) ) - 2 ;  
+  //localparam ACC_NON_FRAC_REQ  =  1 + ( 2**(EXP_OUT-1) );              
+  localparam ACC_FRAC_REQ      =  FRAC_OUT + ( 2**(EXP_IN_A-1)+2**(EXP_IN_B-1) ) - 2;     // mantisa + negative shifts
+  localparam ACC_NON_FRAC_REQ  =  1 + 1 + ( 2**(EXP_IN_A-1)+2**(EXP_IN_B-1) );            // sign + implicite one + positive shifts
+  
   localparam ACC_TOTAL_REQ     =  ACC_FRAC_REQ + ACC_NON_FRAC_REQ;
 
-  localparam ACC_FRAC      =  ACC_FRAC_REQ;                     // 16      
-  //localparam ACC_NON_FRAC  =  ACC_DESIRED - ACC_FRAC_REQ;     // 16 
-  localparam ACC_NON_FRAC  =  ACC_EXTRA_BIT + ACC_NON_FRAC_REQ; // 16 
+  localparam ACC_FRAC      =  ACC_FRAC_REQ;                       
+  localparam ACC_NON_FRAC  =  (ACC_DESIRED != 0) ? (ACC_DESIRED - ACC_FRAC_REQ) : (ACC_EXTRA_BIT + ACC_NON_FRAC_REQ);
   localparam ACC_TOTAL     =  ACC_FRAC + ACC_NON_FRAC;
   
 
