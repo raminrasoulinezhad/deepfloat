@@ -67,8 +67,12 @@ module FloatExpand #(parameter EXP_IN=3,
       // Number of leading zeros in the input fraction
       logic [$clog2(FRAC_IN+1)-1:0] clzFraction;
 
-      CountLeadingZeros #(.WIDTH(FRAC_IN))
-      clz(.in(in.data.fraction), .out(clzFraction));
+      if (FRAC_IN > 1) begin 
+        CountLeadingZeros #(.WIDTH(FRAC_IN))
+        clz(.in(in.data.fraction), .out(clzFraction));
+      end else begin 
+        assign clzFraction = 0;
+      end 
 
       always_comb begin
         out.data.sign = in.data.sign;
