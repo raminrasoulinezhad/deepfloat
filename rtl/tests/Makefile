@@ -22,8 +22,9 @@ fff_fpga:
 
 fff_asic:
 	# source: https://www.csee.umbc.edu/~tinoosh/cmpe641/tutorials/rc/rc_commandref.pdf, page 90
-	passingstring="array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_e $(acc_e) acc_f $(acc_f)]"
-	rc -f fff_asic.tcl -ex "$(passingstring)"
+	rm -rf $(addr)
+	mkdir $(addr)
+	cd $(addr) && rc -f ../../fff_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_e $(acc_e) acc_f $(acc_f)]"
 
 tabulate:
 	python3 tabulate.py 
