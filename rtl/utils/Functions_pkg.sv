@@ -87,6 +87,11 @@ package Functions;
   endfunction
 
   function automatic integer largestPowerOf2Divisor(input integer a);
+    //if (a == 0) begin 
+    //  return 0;
+    //end else begin 
+    //  return 2 ** (clog2(a) - 1);
+    //end 
     return 2 ** (clog2(a) - 1);
   endfunction
 
