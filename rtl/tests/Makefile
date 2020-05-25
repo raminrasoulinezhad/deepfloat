@@ -5,7 +5,7 @@
 # 	cd ~/setup/setup_working_dir_130nm/
 #	source .cshrc_hcmos9a_v1 
 
-.PHONY:  ffk_fpga  fff_fpga  clean_tabulations  clean  
+.PHONY:  ffk_fpga  fff_fpga  fff_asic  ffk_asic  clean_tabulations  clean  
 
 
 ffk_fpga:
@@ -25,6 +25,11 @@ fff_asic:
 	rm -rf $(addr)
 	mkdir $(addr)
 	cd $(addr) && rc -f ../../fff_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_e $(acc_e) acc_f $(acc_f)]"
+
+ffk_asic:
+	rm -rf $(addr)
+	mkdir $(addr)
+	cd $(addr) && rc -f ../../ffk_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_d $(acc_d) acc_extra $(acc_extra)]"
 
 tabulate:
 	python3 tabulate.py 

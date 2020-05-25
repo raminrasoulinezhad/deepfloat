@@ -41,7 +41,7 @@ def report_synth_resource(file_name):
 
 	except:
 		print ('%s is not available' % (file_name))
-	print(LUT, Reg, DSP, URAM, RAMB18, RAMB36)
+
 	return LUT, Reg, DSP, URAM, RAMB18, RAMB36
 
 
@@ -60,12 +60,11 @@ def report_impl_wns(file_name, clk_p):
 
 	except:
 		print ('%s is not available' % (file_name))
-	print(clk)
+
 	return clk
 
 
 def report_asic_area(file_name):
-
 	area = -1
 	try:
 		f_temp = open(file_name, "r")
@@ -86,7 +85,7 @@ def report_asic_area(file_name):
 	return area 
 
 
-def report_asic_clk(file_name):
+def report_asic_clk(file_name, clk_p):
 
 	clk = -1
 	try:
@@ -96,7 +95,7 @@ def report_asic_clk(file_name):
 
 			m = re.match(r"Timing slack :\s+(\d+)ps", line)
 			if m:
-				clk = 1000000.0/(1000-int(m.groups()[0]))
+				clk = 1000000.0/(clk_p-int(m.groups()[0]))
 
 		f_temp.close() 
 
@@ -136,12 +135,32 @@ def extract_impl_timing_routed_file_name(exp_dir):
 
 
 def extract_asic_area_file_name(exp_dir):
-	loc = "answers/" + exp_dir + "_initialtest_cell.rep"
-	return loc
+	
+	loc = exp_dir + "/"
+	try:
+		for exp_dir in np.sort(os.listdir(loc)):
+			print "ramin:" + exp_dir
+			if exp_dir.endswith("_initialtest_cell.rep"):
+				return loc + exp_dir
+	except:
+		pass
+
+	return loc + "*_initialtest_cell.rep"	
+
+
 
 def extract_asic_clk_file_name(exp_dir):
-	loc = "answers/" + exp_dir + "_initialtest_timing.rep"
-	return loc
+
+	loc = exp_dir + "/"
+	try:
+		for exp_dir in np.sort(os.listdir(loc)):
+			print "ramin:" + exp_dir
+			if exp_dir.endswith("_initialtest_timing.rep"):
+				return loc + exp_dir
+	except:
+		pass
+
+	return loc + "*_initialtest_timing.rep"	
 
 
 if __name__ == "__main__":
@@ -152,6 +171,7 @@ if __name__ == "__main__":
 	f = open("tabulate"+date_time+".txt", "w")
 
 	main_dir = "./paper/"
+	clk_p = 2
 	
 	f.write("#       %25s\t%5s\t%5s\t%5s\t%5s\t\t%5s\t%5s\n" % ("Experiment name", "LUT", "Reg", "DSP", "freq", "area", "freq"))
 	for exp_dir in np.sort(os.listdir(main_dir)):
@@ -165,13 +185,14 @@ if __name__ == "__main__":
 			LUT, Reg, DSP, URAM, RAMB18, RAMB36 = report_synth_resource(file_name)
 
 			file_name = extract_impl_timing_routed_file_name(main_dir + exp_dir)
-			clk_fpga = report_impl_wns(file_name, 2)
+			clk_fpga = report_impl_wns(file_name, clk_p)
 
-			file_name = extract_asic_area_file_name(exp_dir)
-			area = report_asic_area(main_dir + file_name)
+			file_name = extract_asic_area_file_name(main_dir + exp_dir)
+			area = report_asic_area(file_name)
+	
 
-			file_name = extract_asic_clk_file_name(exp_dir)
-			clk_asic = report_asic_clk(main_dir + file_name)
+			file_name = extract_asic_clk_file_name(main_dir + exp_dir)
+			clk_asic = report_asic_clk(file_name, clk_p * 1000)
 
 			f.write("# arch: %25s\t%5d\t%5d\t%5d\t%5d\t\t%5d\t%5d\n" % (exp_dir, LUT, Reg, DSP, clk_fpga, area, clk_asic))
 		
