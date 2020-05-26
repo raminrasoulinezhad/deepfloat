@@ -139,7 +139,6 @@ def extract_asic_area_file_name(exp_dir):
 	loc = exp_dir + "/"
 	try:
 		for exp_dir in np.sort(os.listdir(loc)):
-			print "ramin:" + exp_dir
 			if exp_dir.endswith("_initialtest_cell.rep"):
 				return loc + exp_dir
 	except:
@@ -154,7 +153,6 @@ def extract_asic_clk_file_name(exp_dir):
 	loc = exp_dir + "/"
 	try:
 		for exp_dir in np.sort(os.listdir(loc)):
-			print "ramin:" + exp_dir
 			if exp_dir.endswith("_initialtest_timing.rep"):
 				return loc + exp_dir
 	except:
@@ -173,7 +171,7 @@ if __name__ == "__main__":
 	main_dir = "./paper/"
 	clk_p = 2
 	
-	f.write("#       %25s\t%5s\t%5s\t%5s\t%5s\t\t%5s\t%5s\n" % ("Experiment name", "LUT", "Reg", "DSP", "freq", "area", "freq"))
+	f.write("#       %-25s\t%5s\t%5s\t%5s\t%5s\t\t%5s\t%5s\n" % ("Experiment name", "LUT", "Reg", "DSP", "freq", "area", "freq"))
 	for exp_dir in np.sort(os.listdir(main_dir)):
 		if exp_dir in ["answers", "files"]:
 			continue 
@@ -194,6 +192,6 @@ if __name__ == "__main__":
 			file_name = extract_asic_clk_file_name(main_dir + exp_dir)
 			clk_asic = report_asic_clk(file_name, clk_p * 1000)
 
-			f.write("# arch: %25s\t%5d\t%5d\t%5d\t%5d\t\t%5d\t%5d\n" % (exp_dir, LUT, Reg, DSP, clk_fpga, area, clk_asic))
+			f.write("# arch: %-25s\t%5d\t%5d\t%5d\t%5d\t\t%5d\t%5d\n" % (exp_dir, LUT, Reg, DSP, clk_fpga, area, clk_asic))
 		
 	f.close() 
