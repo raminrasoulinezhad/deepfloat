@@ -106,7 +106,29 @@ def report_asic_clk(file_name, clk_p):
 
 	return clk 
 
+def report_asic_power(file_name):
 
+	power_leakage = power_dynamic = power_total = -1
+	try:
+		f_temp = open(file_name, "r")
+		
+		for line in f_temp:
+
+			m = re.match(r"[\w\.]+\s+\d+\s+(\-*\d+)\.(\d+)\s+(\-*\d+)\.(\d+)\s+(\-*\d+)\.(\d+)", line)
+			if m:
+				power_leakage = float(m.groups()[0] + "." + m.groups()[1])
+				power_dynamic = float(m.groups()[2] + "." + m.groups()[3])
+				power_total   = float(m.groups()[4] + "." + m.groups()[5])
+				break
+
+		f_temp.close() 
+
+		print ('%s is recorded' % (file_name))
+
+	except:
+		print ('%s is not available' % (file_name))
+
+	return power_leakage, power_dynamic, power_total 
 
 def extract_synth_util_file_name(exp_dir):
 	loc = exp_dir + "/project.runs/synth/"
@@ -134,31 +156,19 @@ def extract_impl_timing_routed_file_name(exp_dir):
 	return loc + "_timing_summary_routed.rpt"	
 
 
-def extract_asic_area_file_name(exp_dir):
+def extract_asic_file_name(exp_dir, file_type="cell"):
+
+	#file_type = "timing", "cell", "power", "area"
 	
 	loc = exp_dir + "/"
 	try:
 		for exp_dir in np.sort(os.listdir(loc)):
-			if exp_dir.endswith("_initialtest_cell.rep"):
+			if exp_dir.endswith("_initialtest_" + file_type + ".rep"):
 				return loc + exp_dir
 	except:
 		pass
 
-	return loc + "*_initialtest_cell.rep"	
-
-
-
-def extract_asic_clk_file_name(exp_dir):
-
-	loc = exp_dir + "/"
-	try:
-		for exp_dir in np.sort(os.listdir(loc)):
-			if exp_dir.endswith("_initialtest_timing.rep"):
-				return loc + exp_dir
-	except:
-		pass
-
-	return loc + "*_initialtest_timing.rep"	
+	return loc + "*_initialtest_" + file_type + ".rep"	
 
 
 if __name__ == "__main__":
@@ -166,12 +176,13 @@ if __name__ == "__main__":
 	now = datetime.now() # current date and time
 	date_time = now.strftime("_%Y_%m_%d_%H_%M_%S")
 
-	f = open("tabulate"+date_time+".txt", "w")
+	file_save = "tabulate"+date_time+".txt"
+	f = open(file_save, "w")
 
 	main_dir = "./paper/"
 	clk_p = 2
 	
-	f.write("#       %-25s\t%5s\t%5s\t%5s\t%5s\t\t%5s\t%5s\n" % ("Experiment name", "LUT", "Reg", "DSP", "freq", "area", "freq"))
+	f.write("#       %-25s\t%5s\t%5s\t%5s\t%5s\t\t%5s\t%5s\t%8s\n" % ("Experiment name", "LUT", "Reg", "DSP", "freq", "area", "freq", "Pow(nW)"))
 	for exp_dir in np.sort(os.listdir(main_dir)):
 		if exp_dir in ["answers", "files"]:
 			continue 
@@ -185,13 +196,17 @@ if __name__ == "__main__":
 			file_name = extract_impl_timing_routed_file_name(main_dir + exp_dir)
 			clk_fpga = report_impl_wns(file_name, clk_p)
 
-			file_name = extract_asic_area_file_name(main_dir + exp_dir)
-			area = report_asic_area(file_name)
-	
+			file_name = extract_asic_file_name(main_dir + exp_dir, "cell")
+			area_asic = report_asic_area(file_name)
 
-			file_name = extract_asic_clk_file_name(main_dir + exp_dir)
+			file_name = extract_asic_file_name(main_dir + exp_dir, "timing")
 			clk_asic = report_asic_clk(file_name, clk_p * 1000)
+	
+			file_name = extract_asic_file_name(main_dir + exp_dir, "power")
+			power_leakage, power_dynamic, power_total = report_asic_power(file_name)
 
-			f.write("# arch: %-25s\t%5d\t%5d\t%5d\t%5d\t\t%5d\t%5d\n" % (exp_dir, LUT, Reg, DSP, clk_fpga, area, clk_asic))
+			f.write("# arch: %-25s\t%5d\t%5d\t%5d\t%5d\t\t%5d\t%5d\t%8d\n" % (exp_dir, LUT, Reg, DSP, clk_fpga, area_asic, clk_asic, int(power_total)))
 		
 	f.close() 
+
+	os.system('cat ' + file_save) 
