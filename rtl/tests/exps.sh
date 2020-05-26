@@ -24,6 +24,17 @@ make ffk_asic  addr=./paper/ffk_asic_A_3_1_B_2_2_ACC_20    a_e=3  a_f=1  b_e=2  
 #Log 5 bit, Add = 32 
 #Log 4 bit, Add = 16 
 
+exit
+
+make ffk_POC_asic  addr=./paper/ffk_POC_asic_A_4_5_B_2_5_ACC_31    a_e=4  a_f=5  b_e=2  b_f=5  acc_d=31
+make ffk_POC_asic  addr=./paper/ffk_POC_asic_A_3_2_B_2_3_ACC_20    a_e=3  a_f=2  b_e=2  b_f=3  acc_d=20
+make ffk_POC_asic  addr=./paper/ffk_POC_asic_A_3_4_B_3_4_ACC_27    a_e=3  a_f=4  b_e=3  b_f=4  acc_d=27
+make ffk_POC_asic  addr=./paper/ffk_POC_asic_A_3_1_B_2_2_ACC_20    a_e=3  a_f=1  b_e=2  b_f=2  acc_d=20 
+
+
+
+
+
 
 
 # Sample 

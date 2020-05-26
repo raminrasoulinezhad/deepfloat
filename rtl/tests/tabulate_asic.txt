@@ -1,5 +1,9 @@
 #                 Experiment name	  LUT	  Reg	  DSP	 freq		 area	 freq
 # arch: fff_asic_A_5_3_B_4_3_ACC_6_9	   -1	   -1	   -1	   -1		 1060	 1545
+# arch: ffk_POC_asic_A_3_1_B_2_2_ACC_20	   -1	   -1	   -1	   -1		  172	 1094
+# arch: ffk_POC_asic_A_3_2_B_2_3_ACC_20	   -1	   -1	   -1	   -1		  200	 1085
+# arch: ffk_POC_asic_A_3_4_B_3_4_ACC_27	   -1	   -1	   -1	   -1		  304	  861
+# arch: ffk_POC_asic_A_4_5_B_2_5_ACC_31	   -1	   -1	   -1	   -1		  391	  771
 # arch: ffk_asic_A_3_1_B_2_2_ACC_20	   -1	   -1	   -1	   -1		  447	  865
 # arch: ffk_asic_A_3_2_B_2_3_ACC_20	   -1	   -1	   -1	   -1		  556	  833
 # arch: ffk_asic_A_3_4_B_3_4_ACC_27	   -1	   -1	   -1	   -1		  764	  788
