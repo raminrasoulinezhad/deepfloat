@@ -4,7 +4,7 @@ import os
 import glob
 from datetime import datetime
 
-def report_synth_resource(file_name):
+def report_synth_resource(file_name, mode="synth"):
 
 	LUT = Reg = DSP = URAM = RAMB18 = RAMB36 = -1
 	try:
@@ -12,29 +12,39 @@ def report_synth_resource(file_name):
 		
 		for line in f_temp:
 			#print(line)
-			m = re.match(r"\|\s+CLB LUTs\*\s+\|\s+(?P<LUT>\d+)", line)
+			if (mode == "synth"):
+				m = re.match(r"\|\s+CLB LUTs\*\s+\|\s+(?P<LUT>\d+)", line)
+			else:
+				m = re.match(r"\|\s+CLB LUTs\s+\|\s+(?P<LUT>\d+)", line)
 			if m:
 				LUT = int(m.groups("LUT")[0])
+
 
 			m = re.match(r"\|\s+CLB Registers\s+\|\s+(?P<Reg>\d+)", line)
 			if m:
 				Reg = int(m.groups("Reg")[0])
 
+
 			m = re.match(r"\|\s+DSPs\s+\|\s+(?P<DSP>\d+)", line)
 			if m:
 				DSP = int(m.groups("DSP")[0])
+
 
 			m = re.match(r"\|\s+URAM\s+\|\s+(?P<URAM>\d+)", line)
 			if m:
 				URAM = int(m.groups("URAM")[0])
 
+
 			m = re.match(r"\|\s+RAMB18\s+\|\s+(?P<RAMB18>\d+)", line)
 			if m:
 				RAMB18 = int(m.groups("RAMB18")[0])
 
+
 			m = re.match(r"\|\s+RAMB36\/FIFO\*\s+\|\s+(?P<RAMB36>\d+)", line)
 			if m:
 				RAMB36 = int(m.groups("RAMB36")[0])
+
+
 		f_temp.close() 
 
 		print ('%s is recorded' % (file_name))
@@ -130,17 +140,23 @@ def report_asic_power(file_name):
 
 	return power_leakage, power_dynamic, power_total 
 
-def extract_synth_util_file_name(exp_dir):
-	loc = exp_dir + "/project.runs/synth/"
+def extract_synth_util_file_name(exp_dir, mode="synth"):
+	# modes: "synth", "placed"
+	if (mode == "synth"):
+		loc = exp_dir + "/project.runs/synth/"
+	elif (mode == "placed"):
+		loc = exp_dir + "/project.runs/impl/"
+	else:
+		raise Exception ("file name extractor: mode is wrong")
 
 	try:
 		for exp_dir in np.sort(os.listdir(loc)):
-			if exp_dir.endswith("_utilization_synth.rpt"):
+			if exp_dir.endswith("_utilization_" + mode + ".rpt"):
 				return loc + exp_dir
 	except:
 		pass
 
-	return loc + "*_utilization_synth.rpt"	
+	return loc + "*_utilization_" + mode + ".rpt"	
 
 
 def extract_impl_timing_routed_file_name(exp_dir):
@@ -182,7 +198,7 @@ if __name__ == "__main__":
 	main_dir = "./paper/"
 	clk_p = 2
 	
-	f.write("#       %-25s\t%5s\t%5s\t%5s\t%5s\t\t%5s\t%5s\t%8s\n" % ("Experiment name", "LUT", "Reg", "DSP", "freq", "area", "freq", "Pow(nW)"))
+	f.write("  %-30s\t%5s\t%5s\t%5s\t%5s\t\t%5s\t%5s\t%8s\n" % ("Experiment name", "LUT", "Reg", "DSP", "freq", "area", "freq", "Pow(nW)"))
 	for exp_dir in np.sort(os.listdir(main_dir)):
 		if exp_dir in ["answers", "files"]:
 			continue 
@@ -190,8 +206,11 @@ if __name__ == "__main__":
 			# extract resource utilization from synthesis 
 			#file_name = main_dir + exp_dir + "/project_1.runs/synth/" + top + "_utilization_synth.rpt"
 
-			file_name = extract_synth_util_file_name(main_dir + exp_dir)
-			LUT, Reg, DSP, URAM, RAMB18, RAMB36 = report_synth_resource(file_name)
+			#file_name = extract_synth_util_file_name(main_dir + exp_dir, mode="synth")
+			#LUT, Reg, DSP, URAM, RAMB18, RAMB36 = report_synth_resource(file_name, mode="synth")
+			
+			file_name = extract_synth_util_file_name(main_dir + exp_dir, mode="placed")
+			LUT, Reg, DSP, URAM, RAMB18, RAMB36 = report_synth_resource(file_name, mode="placed")
 
 			file_name = extract_impl_timing_routed_file_name(main_dir + exp_dir)
 			clk_fpga = report_impl_wns(file_name, clk_p)
@@ -205,7 +224,7 @@ if __name__ == "__main__":
 			file_name = extract_asic_file_name(main_dir + exp_dir, "power")
 			power_leakage, power_dynamic, power_total = report_asic_power(file_name)
 
-			f.write("# arch: %-25s\t%5d\t%5d\t%5d\t%5d\t\t%5d\t%5d\t%8d\n" % (exp_dir, LUT, Reg, DSP, clk_fpga, area_asic, clk_asic, int(power_total)))
+			f.write("# %-30s\t%5d\t%5d\t%5d\t%5d\t\t%5d\t%5d\t%8d\n" % (exp_dir, LUT, Reg, DSP, clk_fpga, area_asic, clk_asic, int(power_total)))
 		
 	f.close() 
 
