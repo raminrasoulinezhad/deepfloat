@@ -1,10 +1,14 @@
-#       Experiment name          	  LUT	  Reg	  DSP	 freq		 area	 freq
-# arch: fff_A_5_3_B_4_3_ACC_6_9  	  225	   62	    0	  642		   -1	   -1
-# arch: ffk_A_3_1_B_2_2_ACC_20   	  149	   46	    0	  656		   -1	   -1
-# arch: ffk_A_3_2_B_2_3_ACC_20   	  209	   52	    0	  552		   -1	   -1
-# arch: ffk_A_3_4_B_3_4_ACC_27   	  325	   63	    0	  562		   -1	   -1
-# arch: ffk_A_4_5_B_2_5_ACC_31   	  363	   76	    0	  540		   -1	   -1
-# arch: ffk_POC_fpga_A_3_1_B_2_2_ACC_20	   48	   20	    0	  775		   -1	   -1
-# arch: ffk_POC_fpga_A_3_2_B_2_3_ACC_20	   70	   20	    0	  775		   -1	   -1
-# arch: ffk_POC_fpga_A_3_4_B_3_4_ACC_27	  153	   27	    0	  775		   -1	   -1
-# arch: ffk_POC_fpga_A_4_5_B_2_5_ACC_31	  161	   31	    0	  775		   -1	   -1
+  Experiment name               	  LUT	  Reg	  DSP	 freq		 area	 freq	 Pow(nW)
+# fff_fpga_A_5_3_B_4_3_ACC_6_9  	  408	  140	    0	  523		   -1	   -1	      -1
+# fff_scyc_fpga_A_5_3_B_4_3_ACC_6_9	  419	   16	    0	  775		   -1	   -1	      -1
+# ffk_POC_fpga_A_3_1_B_2_2_ACC_20	   48	   20	    0	  775		   -1	   -1	      -1
+# ffk_POC_fpga_A_3_2_B_2_3_ACC_20	   70	   20	    0	  775		   -1	   -1	      -1
+# ffk_POC_fpga_A_3_4_B_3_4_ACC_27	  153	   27	    0	  775		   -1	   -1	      -1
+# ffk_POC_fpga_A_4_5_B_2_5_ACC_31	  161	   31	    0	  775		   -1	   -1	      -1
+# ffk_fpga_A_3_1_B_2_2_ACC_20   	  148	   46	    0	  656		   -1	   -1	      -1
+# ffk_fpga_A_3_2_B_2_3_ACC_20   	  206	   52	    0	  552		   -1	   -1	      -1
+# ffk_fpga_A_3_4_B_3_4_ACC_27   	  325	   61	    0	  562		   -1	   -1	      -1
+# fxfxk_POC_fpga_A_8_B_8_ACC_16 	  101	   16	    0	  775		   -1	   -1	      -1
+# fxfxk_POC_fpga_A_8_B_8_ACC_32 	  120	   32	    0	  775		   -1	   -1	      -1
+# llk_POC_fpga_A_3_B_3_ACC_16   	   20	   16	    0	  775		   -1	   -1	      -1
+# llk_POC_fpga_A_4_B_4_ACC_32   	   47	   32	    0	  775		   -1	   -1	      -1
