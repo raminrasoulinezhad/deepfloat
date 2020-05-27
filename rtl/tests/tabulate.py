@@ -196,13 +196,21 @@ if __name__ == "__main__":
 	f = open(file_save, "w")
 
 	main_dir = "./paper/"
-	clk_p = 2
+	#clk_p = 2
 	
 	f.write("%-45s\t%4s %4s %3s %5s\t%5s %5s %10s\n" % ("Experiment name", "LUT", "Reg", "DSP", "freq", "area", "freq", "Pow(nW)"))
 	for exp_dir in np.sort(os.listdir(main_dir)):
 		if exp_dir in ["answers", "files"]:
 			continue 
 		else: 
+			
+			if exp_dir.endswith("MHz1000"):
+				clk_p = 1
+			elif exp_dir.endswith("MHz750"):
+				clk_p = 1.333
+			elif exp_dir.endswith("MHz500"):
+				clk_p = 2
+
 			# extract resource utilization from synthesis 
 			#file_name = main_dir + exp_dir + "/project_1.runs/synth/" + top + "_utilization_synth.rpt"
 
