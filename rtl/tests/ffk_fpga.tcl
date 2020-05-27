@@ -207,7 +207,7 @@ add_files {../log/types/LogNumberUnpacked.sv}
 add_files {../log/LogAdd.sv}
 add_files {../log/FloatToLog.sv}
 
-add_files -fileset constrs_1 -norecurse ./Cons.xdc
+add_files -fileset constrs_1 -norecurse [lindex $argv 8]
 
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1

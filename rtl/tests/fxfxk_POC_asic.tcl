@@ -30,6 +30,11 @@
 #			i.g. CORX9ALPULL_nom_1.20V_25C.lib
 #####################################################################################################################
 
+# parameters
+set a_s $paramters(a_s)
+set b_s $paramters(b_s)
+set acc_d $paramters(acc_d)
+
 set_attribute hdl_search_path {../../../}
 
 set_attribute lib_search_path {/mnt/edatools/PDKs/STMicro28nm/cmos28fdsoi_29/C28SOI_SC_12_CORE_LR/5.1-03/libs/}
@@ -44,15 +49,10 @@ set myFiles [list PiecesOfCakes/FixedMultiplyAdd_POC.sv];
 # name of top level module
 set basename FixedMultiplyAdd_POC;
 set myClk clock                  ;# clock name
-set myPeriod_ps 2000             ;# Clock period in ps
+set myPeriod_ps $paramters(period)             ;# Clock period in ps
 set myInDelay_ns 0.0             ;# delay from clock to inputs valid
 set myOutDelay_ns 0.0            ;# delay from clock to output valid
 set runname initialtest          ;# name appended to output files
-
-# parameters
-set a_s $paramters(a_s)
-set b_s $paramters(b_s)
-set acc_d $paramters(acc_d)
 
 #*********************************************************
 #*   below here shouldn't need to be changed...          *

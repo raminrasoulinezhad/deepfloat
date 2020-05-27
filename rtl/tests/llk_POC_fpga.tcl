@@ -3,7 +3,7 @@ create_project project [lindex $argv 0] -part [lindex $argv 4]
 # using: find . -name "*.sv"
 add_files {../PiecesOfCakes/LogMultiplyAdd_POC.sv}
 
-add_files -fileset constrs_1 -norecurse ./Cons.xdc
+add_files -fileset constrs_1 -norecurse [lindex $argv 5]
 
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1

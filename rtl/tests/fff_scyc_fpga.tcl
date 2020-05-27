@@ -211,7 +211,7 @@ add_files {../float/FloatMultiply_COMB.sv}
 add_files {../float/FloatAdd_SCYC.sv} 
 add_files {../float/FloatMultiplyAddWithFloat_SCYC.sv} 
 
-add_files -fileset constrs_1 -norecurse ./Cons.xdc
+add_files -fileset constrs_1 -norecurse [lindex $argv 8]
 
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
