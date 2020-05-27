@@ -31,10 +31,10 @@
 #####################################################################################################################
 
 # parameters
-set a_e $paramters(acc_d)
-set a_f $paramters(acc_f)
-set b_e $paramters(f_e)
-set b_f $paramters(f_f)
+set acc_d $paramters(acc_d)
+set acc_f $paramters(acc_f)
+set f_e $paramters(f_e)
+set f_f $paramters(f_f)
 
 set_attribute hdl_search_path {../../../}
 
