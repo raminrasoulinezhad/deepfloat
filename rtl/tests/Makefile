@@ -9,7 +9,7 @@
 # ASIC & tcl & Cadence RTL compiler:
 # 	source: https://www.csee.umbc.edu/~tinoosh/cmpe641/tutorials/rc/rc_commandref.pdf, page 90
 
-.PHONY:  ffk_fpga  fff_fpga  ffk_POC_fpga  llk_POC_fpga  fxfxk_POC_fpga  fff_scyc_fpga  fff_asic  ffk_asic  ffk_POC_asic  llk_POC_asic  fxfxk_POC_asic  fff_scyc_asic  clean_tabulations  clean 
+.PHONY:  ffk_fpga  fff_fpga  ffk_POC_fpga  llk_POC_fpga  fxfxk_POC_fpga  fff_scyc_fpga  ktf_fpga  fff_asic  ffk_asic  ffk_POC_asic  llk_POC_asic  fxfxk_POC_asic  fff_scyc_asic  ktf_asic  clean_tabulations  clean 
 
 #################
 ## FPGA tests
@@ -50,6 +50,11 @@ fff_scyc_fpga:
 	vivado -mode batch -source fff_scyc_fpga.tcl -tclargs $(addr) $(a_e) $(a_f) $(b_e) $(b_f) $(acc_e) $(acc_f) $(part) $(cons)
 	rm -rf vivado*
 
+ktf_fpga:
+	#KulischToFloat
+	rm -rf $(addr)
+	vivado -mode batch -source ktf_fpga.tcl -tclargs $(addr) $(acc_d) $(acc_f) $(f_e) $(f_f) $(part) $(cons)
+	rm -rf vivado*
 
 #################
 ## ASIC tests
@@ -90,6 +95,11 @@ fff_scyc_asic:
 	mkdir $(addr)
 	cd $(addr) && rc -f ../../fff_scyc_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_e $(acc_e) acc_f $(acc_f) period $(period)]"
 
+ktf_asic:
+	#KulischToFloat
+	rm -rf $(addr)
+	mkdir $(addr)
+	cd $(addr) && rc -f ../../ktf_asic.tcl -ex "array set paramters [list acc_d $(acc_d) acc_f $(acc_f) f_e $(f_e) f_f $(f_f) period $(period)]"
 
 #################
 ## Tabulations
@@ -102,10 +112,9 @@ tabulate:
 ## Cleaners
 #################
 clean_tabulations:
-	rm -rf tabulate_*.txt
+	rm -rf tabulate_2*.txt
 
 clean:
 	rm -rf vivado* tabulate_*.txt
-	rm -rf project_
 	rm -rf nohup.out
 	rm -rf rc.* *initialtest* fv
