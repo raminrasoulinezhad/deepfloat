@@ -72,7 +72,7 @@ make ffk_fpga  addr=./paper/ffk_fpga_A_4_5_B_2_5_ACC_31_MHz500    a_e=4  a_f=5  
 make ffk_fpga  addr=./paper/ffk_fpga_A_3_2_B_2_3_ACC_20_MHz500    a_e=3  a_f=2  b_e=2  b_f=3  acc_d=20  acc_extra=0  part=xczu28dr-ffvg1517-2-e cons=Cons_500.xdc &
 make ffk_fpga  addr=./paper/ffk_fpga_A_3_4_B_3_4_ACC_27_MHz500    a_e=3  a_f=4  b_e=3  b_f=4  acc_d=27  acc_extra=0  part=xczu28dr-ffvg1517-2-e cons=Cons_500.xdc &
 make ffk_fpga  addr=./paper/ffk_fpga_A_3_1_B_2_2_ACC_20_MHz500    a_e=3  a_f=1  b_e=2  b_f=2  acc_d=20  acc_extra=0  part=xczu28dr-ffvg1517-2-e cons=Cons_500.xdc &
-########################################################################
+
 # POCs
 make ffk_POC_fpga  addr=./paper/ffk_POC_fpga_A_4_5_B_2_5_ACC_31_MHz500    a_e=4  a_f=5  b_e=2  b_f=5  acc_d=31  part=xczu28dr-ffvg1517-2-e cons=Cons_500.xdc &
 make ffk_POC_fpga  addr=./paper/ffk_POC_fpga_A_3_2_B_2_3_ACC_20_MHz500    a_e=3  a_f=2  b_e=2  b_f=3  acc_d=20  part=xczu28dr-ffvg1517-2-e cons=Cons_500.xdc &
