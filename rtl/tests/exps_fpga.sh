@@ -95,11 +95,19 @@ make fff_scyc_fpga  addr=./paper/fff_scyc_fpga_A_6_9_B_6_9_ACC_6_9_MHz500    a_e
 
 
 #####################
-#F___K_32_F_6_9 
-make ktf_fpga  addr=./paper/ktf_fpga_ACC_16_16_F_6_9_MHz1000   acc_d=16  acc_f=16  f_e=6  f_f=9  part=xczu28dr-ffvg1517-2-e  cons=Cons_1000.xdc &
-make ktf_fpga  addr=./paper/ktf_fpga_ACC_16_16_F_6_9_MHz750    acc_d=16  acc_f=16  f_e=6  f_f=9  part=xczu28dr-ffvg1517-2-e  cons=Cons_750.xdc &
-make ktf_fpga  addr=./paper/ktf_fpga_ACC_16_16_F_6_9_MHz500    acc_d=16  acc_f=16  f_e=6  f_f=9  part=xczu28dr-ffvg1517-2-e  cons=Cons_500.xdc &
-#F___K_32_F_8_23
+#K_16_16_F_6_9 
+make ktf_fpga  addr=./paper/ktf_fpga_ACC_16_16_F_6_9_MHz1000    acc_d=16  acc_f=16  f_e=6  f_f=9  part=xczu28dr-ffvg1517-2-e  cons=Cons_1000.xdc &
+make ktf_fpga  addr=./paper/ktf_fpga_ACC_16_16_F_6_9_MHz750     acc_d=16  acc_f=16  f_e=6  f_f=9  part=xczu28dr-ffvg1517-2-e  cons=Cons_750.xdc &
+make ktf_fpga  addr=./paper/ktf_fpga_ACC_16_16_F_6_9_MHz500     acc_d=16  acc_f=16  f_e=6  f_f=9  part=xczu28dr-ffvg1517-2-e  cons=Cons_500.xdc &
+#K_16_16_F_8_23
 make ktf_fpga  addr=./paper/ktf_fpga_ACC_16_16_F_8_23_MHz1000   acc_d=16  acc_f=16  f_e=8  f_f=23  part=xczu28dr-ffvg1517-2-e  cons=Cons_1000.xdc &
 make ktf_fpga  addr=./paper/ktf_fpga_ACC_16_16_F_8_23_MHz750    acc_d=16  acc_f=16  f_e=8  f_f=23  part=xczu28dr-ffvg1517-2-e  cons=Cons_750.xdc &
 make ktf_fpga  addr=./paper/ktf_fpga_ACC_16_16_F_8_23_MHz500    acc_d=16  acc_f=16  f_e=8  f_f=23  part=xczu28dr-ffvg1517-2-e  cons=Cons_500.xdc &
+#K_18_14_F_6_9 
+make ktf_fpga  addr=./paper/ktf_fpga_ACC_18_14_F_6_9_MHz1000    acc_d=18  acc_f=14  f_e=6  f_f=9  part=xczu28dr-ffvg1517-2-e  cons=Cons_1000.xdc &
+make ktf_fpga  addr=./paper/ktf_fpga_ACC_18_14_F_6_9_MHz750     acc_d=18  acc_f=14  f_e=6  f_f=9  part=xczu28dr-ffvg1517-2-e  cons=Cons_750.xdc &
+make ktf_fpga  addr=./paper/ktf_fpga_ACC_18_14_F_6_9_MHz500     acc_d=18  acc_f=14  f_e=6  f_f=9  part=xczu28dr-ffvg1517-2-e  cons=Cons_500.xdc &
+#K_18_14_F_8_23
+make ktf_fpga  addr=./paper/ktf_fpga_ACC_18_14_F_8_23_MHz1000   acc_d=18  acc_f=14  f_e=8  f_f=23  part=xczu28dr-ffvg1517-2-e  cons=Cons_1000.xdc &
+make ktf_fpga  addr=./paper/ktf_fpga_ACC_18_14_F_8_23_MHz750    acc_d=18  acc_f=14  f_e=8  f_f=23  part=xczu28dr-ffvg1517-2-e  cons=Cons_750.xdc &
+make ktf_fpga  addr=./paper/ktf_fpga_ACC_18_14_F_8_23_MHz500    acc_d=18  acc_f=14  f_e=8  f_f=23  part=xczu28dr-ffvg1517-2-e  cons=Cons_500.xdc &

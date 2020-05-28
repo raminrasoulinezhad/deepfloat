@@ -94,11 +94,19 @@ make fff_scyc_asic  addr=./paper/fff_scyc_asic_A_8_23_B_8_23_ACC_8_23_MHz500 a_e
 
 
 #####################
-#F___K_32_F_6_9 
+#K_16_16_F_6_9
 make ktf_asic  addr=./paper/ktf_asic_ACC_16_16_F_6_9_MHz1000   acc_d=16  acc_f=16  f_e=6  f_f=9  period=1000
 make ktf_asic  addr=./paper/ktf_asic_ACC_16_16_F_6_9_MHz750    acc_d=16  acc_f=16  f_e=6  f_f=9  period=1333
 make ktf_asic  addr=./paper/ktf_asic_ACC_16_16_F_6_9_MHz500    acc_d=16  acc_f=16  f_e=6  f_f=9  period=2000
-#F___K_32_F_8_23
+#K_16_16_F_8_23
 make ktf_asic  addr=./paper/ktf_asic_ACC_16_16_F_8_23_MHz1000  acc_d=16  acc_f=16  f_e=8  f_f=23 period=1000
 make ktf_asic  addr=./paper/ktf_asic_ACC_16_16_F_8_23_MHz750   acc_d=16  acc_f=16  f_e=8  f_f=23 period=1333
 make ktf_asic  addr=./paper/ktf_asic_ACC_16_16_F_8_23_MHz500   acc_d=16  acc_f=16  f_e=8  f_f=23 period=2000
+#K_18_14_F_6_9
+make ktf_asic  addr=./paper/ktf_asic_ACC_18_14_F_6_9_MHz1000   acc_d=18  acc_f=14  f_e=6  f_f=9  period=1000
+make ktf_asic  addr=./paper/ktf_asic_ACC_18_14_F_6_9_MHz750    acc_d=18  acc_f=14  f_e=6  f_f=9  period=1333
+make ktf_asic  addr=./paper/ktf_asic_ACC_18_14_F_6_9_MHz500    acc_d=18  acc_f=14  f_e=6  f_f=9  period=2000
+#K_18_16_F_8_23
+make ktf_asic  addr=./paper/ktf_asic_ACC_18_14_F_8_23_MHz1000  acc_d=18  acc_f=14  f_e=8  f_f=23 period=1000
+make ktf_asic  addr=./paper/ktf_asic_ACC_18_14_F_8_23_MHz750   acc_d=18  acc_f=14  f_e=8  f_f=23 period=1333
+make ktf_asic  addr=./paper/ktf_asic_ACC_18_14_F_8_23_MHz500   acc_d=18  acc_f=14  f_e=8  f_f=23 period=2000
