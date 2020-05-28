@@ -4,6 +4,16 @@ import os
 import glob
 from datetime import datetime
 
+import argparse
+
+def get_args():
+	parser = argparse.ArgumentParser(description='')
+	parser.add_argument('--dir', type=str, default="./paper/", help='directory to explore')
+
+	args = parser.parse_args()
+	return args
+
+
 def report_synth_resource(file_name, mode="synth"):
 
 	LUT = Reg = DSP = URAM = RAMB18 = RAMB36 = -1
@@ -189,14 +199,15 @@ def extract_asic_file_name(exp_dir, file_type="cell"):
 
 if __name__ == "__main__":
 	
+	args = get_args()
+
 	now = datetime.now() # current date and time
 	date_time = now.strftime("_%Y_%m_%d_%H_%M_%S")
 
 	file_save = "tabulate"+date_time+".txt"
 	f = open(file_save, "w")
 
-	main_dir = "./paper/"
-	#clk_p = 2
+	main_dir = args.dir 	#"./paper/"
 	
 	f.write("%-45s\t%4s %4s %3s %5s\t%5s %5s %10s\n" % ("Experiment name", "LUT", "Reg", "DSP", "freq", "area", "freq", "Pow(nW)"))
 	for exp_dir in np.sort(os.listdir(main_dir)):
@@ -210,6 +221,14 @@ if __name__ == "__main__":
 				clk_p = 1.333
 			elif exp_dir.endswith("MHz500"):
 				clk_p = 2
+			elif exp_dir.endswith("P2000"):
+				clk_p = 2
+			elif exp_dir.endswith("P1333"):
+				clk_p = 1.333
+			elif exp_dir.endswith("P1000"):
+				clk_p = 1
+			else :
+				raise Exception ("clock constraints is not identified")
 
 			# extract resource utilization from synthesis 
 			#file_name = main_dir + exp_dir + "/project_1.runs/synth/" + top + "_utilization_synth.rpt"
