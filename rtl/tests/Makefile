@@ -63,43 +63,43 @@ fff_asic:
 	#FloatMultiplyAddWithFloat
 	rm -rf $(addr)
 	mkdir $(addr)
-	cd $(addr) && rc -f ../../fff_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_e $(acc_e) acc_f $(acc_f) period $(period)]"
+	cd $(addr) && rc -f -E ../../fff_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_e $(acc_e) acc_f $(acc_f) period $(period)]"
 
 ffk_asic:
 	#FloatMultiplyAdd
 	rm -rf $(addr)
 	mkdir $(addr)
-	cd $(addr) && rc -f ../../ffk_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_d $(acc_d) acc_extra $(acc_extra) period $(period)]"
+	cd $(addr) && rc -f -E ../../ffk_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_d $(acc_d) acc_extra $(acc_extra) period $(period)]"
 
 ffk_POC_asic:
 	#FloatMultiplyAdd_POC
 	rm -rf $(addr)
 	mkdir $(addr)
-	cd $(addr) && rc -f ../../ffk_POC_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_d $(acc_d) period $(period)]"
+	cd $(addr) && rc -f -E ../../ffk_POC_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_d $(acc_d) period $(period)]"
 
 llk_POC_asic:
 	#LogMultiplyAdd_POC
 	rm -rf $(addr)
 	mkdir $(addr)
-	cd $(addr) && rc -f ../../llk_POC_asic.tcl -ex "array set paramters [list a_e $(a_e) b_e $(b_e) acc_d $(acc_d) period $(period)]"
+	cd $(addr) && rc -f -E ../../llk_POC_asic.tcl -ex "array set paramters [list a_e $(a_e) b_e $(b_e) acc_d $(acc_d) period $(period)]"
 
 fxfxk_POC_asic:
 	#FixedMultiplyAdd_POC
 	rm -rf $(addr)
 	mkdir $(addr)
-	cd $(addr) && rc -f ../../fxfxk_POC_asic.tcl -ex "array set paramters [list a_s $(a_s) b_s $(b_s) acc_d $(acc_d) period $(period)]"
+	cd $(addr) && rc -f -E ../../fxfxk_POC_asic.tcl -ex "array set paramters [list a_s $(a_s) b_s $(b_s) acc_d $(acc_d) period $(period)]"
 
 fff_scyc_asic:
 	#FloatMultiplyAddWithFloat_SCYC
 	rm -rf $(addr)
 	mkdir $(addr)
-	cd $(addr) && rc -f ../../fff_scyc_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_e $(acc_e) acc_f $(acc_f) period $(period)]"
+	cd $(addr) && rc -f -E ../../fff_scyc_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_e $(acc_e) acc_f $(acc_f) period $(period)]"
 
 ktf_asic:
 	#KulischToFloat
 	rm -rf $(addr)
 	mkdir $(addr)
-	cd $(addr) && rc -f ../../ktf_asic.tcl -ex "array set paramters [list acc_d $(acc_d) acc_f $(acc_f) f_e $(f_e) f_f $(f_f) period $(period)]"
+	cd $(addr) && rc -f -E ../../ktf_asic.tcl -ex "array set paramters [list acc_d $(acc_d) acc_f $(acc_f) f_e $(f_e) f_f $(f_f) period $(period)]"
 
 #################
 ## Tabulations
