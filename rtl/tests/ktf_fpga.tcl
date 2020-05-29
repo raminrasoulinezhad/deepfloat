@@ -1,4 +1,4 @@
-create_project project [lindex $argv 0] -part [lindex $argv 7]
+create_project project [lindex $argv 0] -part [lindex $argv 5]
 
 # using: find . -name "*.sv"
 add_files {../posit/PositRoundToNearestEvenTest.sv}
@@ -207,7 +207,7 @@ add_files {../log/types/LogNumberUnpacked.sv}
 add_files {../log/LogAdd.sv}
 add_files {../log/FloatToLog.sv}
 
-add_files -fileset constrs_1 -norecurse [lindex $argv 8]
+add_files -fileset constrs_1 -norecurse [lindex $argv 6]
 
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
@@ -215,10 +215,9 @@ update_compile_order -fileset sources_1
 create_run synth -flow {Vivado Synthesis 2018}
 create_run impl -parent_run synth -flow {Vivado Implementation 2018}
 
-set_property top FloatMultiplyAdd [current_fileset]
-set_property generic "EXP_IN_A=[lindex $argv 1] FRAC_IN_A=[lindex $argv 2] EXP_IN_B=[lindex $argv 3] FRAC_IN_B=[lindex $argv 4] ACC_DESIRED=[lindex $argv 5] ACC_EXTRA_BIT=[lindex $argv 6] TRAILING_BITS=1" [current_fileset] 
+set_property top KulischToFloat [current_fileset]
+set_property generic "ACC_NON_FRAC=[lindex $argv 1] ACC_FRAC=[lindex $argv 2] EXP=[lindex $argv 3] FRAC=[lindex $argv 4] SATURATE_MAX=1" [current_fileset] 
 
-#set_property include_dirs {../src/main/kernels ../src/main/mem ../src/main/processing_elements ../src/main/routers ../src/main/utils} [current_fileset]
 set_property STEPS.SYNTH_DESIGN.ARGS.MAX_DSP 0 [get_runs synth]
 
 reset_run synth
