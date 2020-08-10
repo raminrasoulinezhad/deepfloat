@@ -22,37 +22,38 @@ def report_synth_resource(file_name, mode="synth"):
 		
 		for line in f_temp:
 			#print(line)
-			if (mode == "synth"):
-				m = re.match(r"\|\s+CLB LUTs\*\s+\|\s+(?P<LUT>\d+)", line)
-			else:
-				m = re.match(r"\|\s+CLB LUTs\s+\|\s+(?P<LUT>\d+)", line)
-			if m:
-				LUT = int(m.groups("LUT")[0])
+			if LUT == -1:
+				if (mode == "synth"):
+					m = re.match(r"\|\s+CLB LUTs\*\s+\|\s+(?P<LUT>\d+)", line)
+				else:
+					m = re.match(r"\|\s+CLB LUTs\s+\|\s+(?P<LUT>\d+)", line)
+				if m:
+					LUT = int(m.groups("LUT")[0])
 
+			if Reg == -1:
+				m = re.match(r"\|\s+CLB Registers\s+\|\s+(?P<Reg>\d+)", line)
+				if m:
+					Reg = int(m.groups("Reg")[0])
 
-			m = re.match(r"\|\s+CLB Registers\s+\|\s+(?P<Reg>\d+)", line)
-			if m:
-				Reg = int(m.groups("Reg")[0])
+			if DSP == -1:
+				m = re.match(r"\|\s+DSPs\s+\|\s+(?P<DSP>\d+)", line)
+				if m:
+					DSP = int(m.groups("DSP")[0])
 
+			if URAM == -1:
+				m = re.match(r"\|\s+URAM\s+\|\s+(?P<URAM>\d+)", line)
+				if m:
+					URAM = int(m.groups("URAM")[0])
 
-			m = re.match(r"\|\s+DSPs\s+\|\s+(?P<DSP>\d+)", line)
-			if m:
-				DSP = int(m.groups("DSP")[0])
+			if RAMB18 == -1:
+				m = re.match(r"\|\s+RAMB18\s+\|\s+(?P<RAMB18>\d+)", line)
+				if m:
+					RAMB18 = int(m.groups("RAMB18")[0])
 
-
-			m = re.match(r"\|\s+URAM\s+\|\s+(?P<URAM>\d+)", line)
-			if m:
-				URAM = int(m.groups("URAM")[0])
-
-
-			m = re.match(r"\|\s+RAMB18\s+\|\s+(?P<RAMB18>\d+)", line)
-			if m:
-				RAMB18 = int(m.groups("RAMB18")[0])
-
-
-			m = re.match(r"\|\s+RAMB36\/FIFO\*\s+\|\s+(?P<RAMB36>\d+)", line)
-			if m:
-				RAMB36 = int(m.groups("RAMB36")[0])
+			if RAMB36 == -1:
+				m = re.match(r"\|\s+RAMB36\/FIFO\*\s+\|\s+(?P<RAMB36>\d+)", line)
+				if m:
+					RAMB36 = int(m.groups("RAMB36")[0])
 
 
 		f_temp.close() 
@@ -221,6 +222,10 @@ if __name__ == "__main__":
 				clk_p = 1.333
 			elif exp_dir.endswith("MHz500"):
 				clk_p = 2
+			elif exp_dir.endswith("MHz250"):
+				clk_p = 4
+			elif exp_dir.endswith("P4000"):
+				clk_p = 4
 			elif exp_dir.endswith("P2000"):
 				clk_p = 2
 			elif exp_dir.endswith("P1333"):
