@@ -1,0 +1,13 @@
+Experiment name                              	 LUT  Reg DSP  freq	 area  freq    Pow(nW)
+fff_fpga_A_5_10_B_5_10_ACC_5_10_MHz1000      	 506  152   0   528	   -1    -1         -1
+fff_fpga_A_5_10_B_5_10_ACC_5_10_MHz250       	 477  152   0   338	   -1    -1         -1
+fff_fpga_A_5_10_B_5_10_ACC_5_10_MHz500       	 508  152   0   520	   -1    -1         -1
+fff_fpga_A_5_10_B_5_10_ACC_5_10_MHz750       	 508  152   0   539	   -1    -1         -1
+fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz1000         	 419  152   0   449	   -1    -1         -1
+fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz250          	 401  152   0   346	   -1    -1         -1
+fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz500          	 423  152   0   423	   -1    -1         -1
+fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz750          	 419  152   0   459	   -1    -1         -1
+fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz1000        	 101   16   0   775	   -1    -1         -1
+fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz250         	 101   16   0   439	   -1    -1         -1
+fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz500         	 101   16   0   775	   -1    -1         -1
+fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz750         	 101   16   0   775	   -1    -1         -1
