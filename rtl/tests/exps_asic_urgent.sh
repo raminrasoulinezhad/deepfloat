@@ -16,3 +16,11 @@ make ffk_POC_asic  addr=./paper_urgent/ffk_POC_asic_A_4_1_B_2_3_ACC_27_MHz750   
 
 make ffk_POC_asic  addr=./paper_urgent/ffk_POC_asic_A_2_1_B_2_1_ACC_13_MHz750    a_e=2  a_f=1  b_e=2  b_f=1  acc_d=13  period=1333
 
+
+# 
+
+make fxfxMult_POC_asic addr=./paper_urgent/fxfxMult_POC_asic_A_3_B_4_MHz750   						a_s=3  b_s=4 													period=1333
+make fxfxAdd_POC_asic  addr=./paper_urgent/fxfxAdd_POC_asic_A_20_MHz750    								a_s=20  															period=1333
+make shifter_POC_asic  addr=./paper_urgent/shifter_POC_asic_A_3_2_B_2_3_ACC_20_MHz750    	a_e=3  a_f=2  b_e=2  b_f=3  acc_d=20  period=1333
+
+
