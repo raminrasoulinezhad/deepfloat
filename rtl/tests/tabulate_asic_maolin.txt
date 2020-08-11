@@ -1,0 +1,21 @@
+Experiment name                              	 LUT  Reg DSP  freq	 area  freq    Pow(nW)
+fff_asic_A_5_10_B_5_10_ACC_5_10_MHz1000      	  -1   -1  -1    -1	 1412  1077    5247973
+fff_asic_A_5_10_B_5_10_ACC_5_10_MHz250       	  -1   -1  -1    -1	 1406  1072    1674299
+fff_asic_A_5_10_B_5_10_ACC_5_10_MHz500       	  -1   -1  -1    -1	 1410  1072    3049495
+fff_asic_A_5_10_B_5_10_ACC_5_10_MHz750       	  -1   -1  -1    -1	 1409  1077    4189308
+fff_asic_A_8_7_B_8_7_ACC_8_7_MHz1000         	  -1   -1  -1    -1	 1165  1766    4616513
+fff_asic_A_8_7_B_8_7_ACC_8_7_MHz250          	  -1   -1  -1    -1	 1158  1503    1325713
+fff_asic_A_8_7_B_8_7_ACC_8_7_MHz500          	  -1   -1  -1    -1	 1156  1474    2479426
+fff_asic_A_8_7_B_8_7_ACC_8_7_MHz750          	  -1   -1  -1    -1	 1165  1766    3589945
+fxfxk_POC_asic_A_16_B_16_ACC_32_MHz1000      	  -1   -1  -1    -1	  903  1001    2864695
+fxfxk_POC_asic_A_16_B_16_ACC_32_MHz250       	  -1   -1  -1    -1	  838   792    1147154
+fxfxk_POC_asic_A_16_B_16_ACC_32_MHz500       	  -1   -1  -1    -1	  838   792    1844627
+fxfxk_POC_asic_A_16_B_16_ACC_32_MHz750       	  -1   -1  -1    -1	  830   804    2312804
+fxfxk_POC_asic_A_8_B_8_ACC_16_MHz1000        	  -1   -1  -1    -1	  303  1369    1056747
+fxfxk_POC_asic_A_8_B_8_ACC_16_MHz250         	  -1   -1  -1    -1	  303  1369     402384
+fxfxk_POC_asic_A_8_B_8_ACC_16_MHz500         	  -1   -1  -1    -1	  303  1369     683439
+fxfxk_POC_asic_A_8_B_8_ACC_16_MHz750         	  -1   -1  -1    -1	  303  1367     884507
+fxfxk_POC_asic_A_8_B_8_ACC_32_MHz1000        	  -1   -1  -1    -1	  455  1001    1612775
+fxfxk_POC_asic_A_8_B_8_ACC_32_MHz250         	  -1   -1  -1    -1	  417   790     541583
+fxfxk_POC_asic_A_8_B_8_ACC_32_MHz500         	  -1   -1  -1    -1	  417   790     939536
+fxfxk_POC_asic_A_8_B_8_ACC_32_MHz750         	  -1   -1  -1    -1	  417   790    1269289
