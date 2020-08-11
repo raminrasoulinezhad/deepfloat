@@ -67,7 +67,7 @@ set runname initialtest          ;# name appended to output files
 # Analyze and Elaborate the HDL files
 read_hdl -sv ${myFiles}
 # https://www.csee.umbc.edu/~tinoosh/cmpe641/tutorials/rc/rc_commandref.pdf, page 285
-#elaborate -parameters {{EXP_IN_A ${a_e}} {FRAC_IN_A ${a_f}} {EXP_IN_B ${b_e}} {FRAC_IN_B ${b_f}} {FRAC_IN_A ${acc_e}} {FRAC_IN_A ${acc_f}} {TRAILING_BITS ${t_b}}} ${basename}
+#elaborate -parameters {{EXP_IN_A ${a_e}} {FRAC_IN_A ${a_f}} {EXP_IN_B ${b_e}} {FRAC_IN_B ${b_f}} {FRAC_IN_ACC ${acc_e}} {FRAC_IN_ACC ${acc_f}} {TRAILING_BITS ${t_b}}} ${basename}
 set lst [list ${a_e} ${a_f} ${b_e} ${b_f} ${t_b} ${acc_e} ${acc_f} ${overflow_detect}]
 elaborate -parameters ${lst} ${basename}
 
