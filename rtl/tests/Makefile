@@ -9,7 +9,7 @@
 # ASIC & tcl & Cadence RTL compiler:
 # 	source: https://www.csee.umbc.edu/~tinoosh/cmpe641/tutorials/rc/rc_commandref.pdf, page 90
 
-.PHONY:  ffk_fpga  fff_fpga  ffk_POC_fpga  llk_POC_fpga  fxfxk_POC_fpga  fff_scyc_fpga  ktf_fpga  fff_asic  ffk_asic  ffk_POC_asic  llk_POC_asic  fxfxk_POC_asic  fff_scyc_asic  ktf_asic  clean_tabulations  clean fxfxMult_POC_asic  fxfxAdd_POC_asic  shifter_POC_asic
+.PHONY:  ffk_fpga  fff_fpga  ffk_POC_fpga  llk_POC_fpga  fxfxk_POC_fpga  fff_scyc_fpga  ktf_fpga  fff_asic  ffk_asic  ffk_POC_asic  llk_POC_asic  fxfxk_POC_asic  fff_scyc_asic  ktf_asic  clean_tabulations  clean fxfxMult_POC_asic  fxfxAdd_POC_asic  shifter_POC_asic fff_asic_yosys
 
 #################
 ## FPGA tests
@@ -119,6 +119,9 @@ shifter_POC_asic:
 	rm -rf $(addr)
 	mkdir $(addr)
 	cd $(addr) && rc -f ../../shifter_POC_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_d $(acc_d) period $(period)]" -E
+
+fff_asic_yosys:
+	yosys fff.ys | tee fff.log
 
 #################
 ## Tabulations

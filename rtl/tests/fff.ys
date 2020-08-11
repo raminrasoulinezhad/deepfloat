@@ -1,0 +1,146 @@
+## vsclib013.lib
+## gscl45nm
+
+# read design
+
+read -sv ../float/FloatDef_pkg.sv  
+read -sv ../utils/Comparison_pkg.sv  
+read -sv ../utils/KulischDef_pkg.sv  
+read -sv ../utils/Functions_pkg.sv  
+read -sv ../log/LogDef_pkg.sv  
+read -sv ../posit/PositDef_pkg.sv  
+read -sv ../posit/QuireDef_pkg.sv    
+read -sv ../float/Float.sv  
+read -sv ../float/operators/FloatConvert.sv  
+read -sv ../float/FloatMultiply.sv  
+read -sv ../float/FloatAdd.sv  
+read -sv ../float/tools/FloatToFloatTool.sv  
+read -sv ../float/FloatMultiplyAddWithFloat.sv  
+read -sv ../float/FloatExpand.sv  
+read -sv ../float/FloatRoundStochastic.sv  
+read -sv ../float/FloatRoundToNearestEven.sv  
+read -sv ../float/FloatProperties.sv  
+read -sv ../float/KulischToFloat.sv  
+read -sv ../float/FloatContract.sv  
+read -sv ../float/FloatStubsForVCS.sv  
+read -sv ../float/FloatMultiplyAdd.sv  
+read -sv ../utils/Add.sv  
+read -sv ../utils/ShiftLeftSticky.sv  
+read -sv ../utils/ZeroPadRight.sv  
+read -sv ../utils/Memory.sv  
+read -sv ../utils/TrailingStickySelect.sv  
+read -sv ../utils/KulischAccumulatorDivide.sv  
+read -sv ../utils/ShiftRightSticky.sv  
+read -sv ../utils/ShiftRegister.sv  
+read -sv ../utils/UtilsStubsForVCS.sv  
+read -sv ../utils/Divider.sv  
+read -sv ../utils/PartSelectReduceOr.sv  
+read -sv ../utils/RoundToNearestEven.sv  
+read -sv ../utils/FieldRead.sv  
+read -sv ../utils/PartSelect.sv  
+read -sv ../utils/ZeroPadLeft.sv  
+read -sv ../utils/Kulisch.sv  
+read -sv ../utils/KulischConvertFixed.sv  
+read -sv ../utils/ShiftLeft.sv  
+read -sv ../utils/CountLeadingZeros.sv  
+read -sv ../utils/OneHotToBinary.sv  
+read -sv ../utils/FieldWrite.sv  
+read -sv ../utils/CountLeadingZerosShiftLeft.sv  
+read -sv ../utils/EndianByteSwap.sv  
+read -sv ../utils/LFSR.sv  
+read -sv ../utils/PipelineRegister.sv  
+read -sv ../utils/DividerFixedPoint.sv  
+read -sv ../utils/ShiftRightArithmetic.sv  
+read -sv ../utils/MSBArbiter.sv  
+read -sv ../utils/ReduceOrTrailingBits.sv  
+read -sv ../utils/KulischAccumulatorAdd.sv  
+read -sv ../log/luts/Pow2DeltaLUT.sv  
+read -sv ../log/luts/Pow2Mem.sv  
+read -sv ../log/luts/Pow2LUT_4x11.sv  
+read -sv ../log/luts/Log2LUT_8x5.sv  
+read -sv ../log/luts/Pow2LUT_5x9.sv  
+read -sv ../log/luts/Pow2DeltaLUT_4x8.sv  
+read -sv ../log/luts/Log2LUT_5x4.sv  
+read -sv ../log/luts/Log2DeltaLUT.sv  
+read -sv ../log/luts/Pow2LUT.sv  
+read -sv ../log/luts/Pow2LUT_10x11.sv 
+read -sv ../log/luts/Pow2LUT_8x9.sv  
+read -sv ../log/luts/Log2LUT_5x7.sv  
+read -sv ../log/luts/Log2LUT_8x8.sv  
+read -sv ../log/luts/Log2LUT_8x7.sv  
+read -sv ../log/luts/Pow2DeltaLUT_4x5.sv  
+read -sv ../log/luts/Pow2LUT_7x8.sv  
+read -sv ../log/luts/Log2Mem.sv  
+read -sv ../log/luts/Log2LUT.sv  
+read -sv ../log/luts/Log2Map.sv  
+read -sv ../log/luts/Pow2DeltaLUT_10x11.sv  
+read -sv ../log/luts/Pow2LUT_4x5.sv  
+read -sv ../log/luts/Log2DeltaLUT_8x7.sv  
+read -sv ../log/luts/Log2DeltaLUT_5x7.sv  
+read -sv ../log/luts/Log2LUT_11x10.sv  
+read -sv ../log/luts/Pow2LUT_4x8.sv  
+read -sv ../log/luts/Log2DeltaLUT_11x10.sv  
+read -sv ../log/luts/Log2LUT_9x8.sv  
+read -sv ../log/luts/Pow2LUT_5x8.sv  
+read -sv ../log/luts/Pow2Map.sv  
+read -sv ../log/luts/Log2LUT_8x4.sv  
+read -sv ../log/FloatSignedNarrow.sv  
+read -sv ../log/LogCompare.sv  
+read -sv ../log/LogMultiplyAddWithFloat.sv
+read -sv ../log/LogStubsForVCS.sv  
+read -sv ../log/operators/LogMathCompare.sv  
+read -sv ../log/operators/LogLinearMath.sv    
+read -sv ../log/tools/FloatToLogTool.sv  
+read -sv ../log/tools/LogProperties.sv  
+read -sv ../log/conversions/LogNumberUnpackedToFloatSigned.sv  
+read -sv ../log/conversions/LogCompactToLogUnpacked.sv  
+read -sv ../log/conversions/LinearFixedToFloatSigned.sv  
+read -sv ../log/conversions/LogNumberUnpackedToLogNumber.sv  
+read -sv ../log/conversions/LogNumberToLogNumberUnpacked.sv  
+read -sv ../log/conversions/LogNumberUnpackedToLogCompact.sv  
+read -sv ../log/conversions/FloatToFloatSigned.sv  
+read -sv ../log/conversions/FloatSignedToFloat.sv  
+read -sv ../log/conversions/FloatSignedToLog.sv  
+read -sv ../log/conversions/FloatSignedToLinearFixed.sv  
+read -sv ../log/LogToLinearFixed.sv  
+read -sv ../log/LogToFloat.sv  
+read -sv ../log/LogAddWithFloat.sv  
+read -sv ../log/LinearFixedToLogCompact.sv  
+read -sv ../log/LogNumberUnpackedExtractTrailing.sv  
+read -sv ../log/LinearFixedToLog.sv  
+read -sv ../log/FloatSignedRoundToNearestEven.sv  
+read -sv ../log/LogMultiply.sv  
+read -sv ../log/LogMultiplyAdd.sv  
+read -sv ../log/types/FloatSigned.sv  
+read -sv ../log/types/LogNumberCompact.sv  
+read -sv ../log/types/LogNumber.sv  
+read -sv ../log/types/LogNumberUnpacked.sv  
+read -sv ../log/LogAdd.sv  
+read -sv ../log/FloatToLog.sv
+	
+chparam -set EXP_IN_A 		5 	FloatMultiplyAddWithFloat
+chparam -set FRAC_IN_A 		10 	FloatMultiplyAddWithFloat
+chparam -set EXP_IN_B 		5 	FloatMultiplyAddWithFloat
+chparam -set FRAC_IN_B 		10 	FloatMultiplyAddWithFloat
+chparam -set EXP_IN_ACC		5 	FloatMultiplyAddWithFloat
+chparam -set FRAC_IN_ACC	10 	FloatMultiplyAddWithFloat
+
+hierarchy -top FloatMultiplyAddWithFloat
+
+# the high-level stuff
+proc; fsm; opt; memory; opt
+
+# mapping to internal cell library
+techmap; opt
+
+# mapping flip-flops to mycells.lib
+dfflibmap -liberty gscl45nm.lib
+
+# mapping logic to mycells.lib
+abc -liberty gscl45nm.lib
+
+# save result
+tee -o fff.stat stat -liberty gscl45nm.lib
+
+# cleanup
+clean
