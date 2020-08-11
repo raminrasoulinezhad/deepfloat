@@ -7,7 +7,15 @@ fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz1000         	 419  152   0   449	   -1    -1   
 fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz250          	 401  152   0   346	   -1    -1         -1
 fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz500          	 423  152   0   423	   -1    -1         -1
 fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz750          	 419  152   0   459	   -1    -1         -1
+fxfxk_POC_fpga_A_16_B_16_ACC_32_MHz1000      	 345   32   0   775	   -1    -1         -1
+fxfxk_POC_fpga_A_16_B_16_ACC_32_MHz250       	 345   32   0   439	   -1    -1         -1
+fxfxk_POC_fpga_A_16_B_16_ACC_32_MHz500       	 345   32   0   775	   -1    -1         -1
+fxfxk_POC_fpga_A_16_B_16_ACC_32_MHz750       	 345   32   0   775	   -1    -1         -1
 fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz1000        	 101   16   0   775	   -1    -1         -1
 fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz250         	 101   16   0   439	   -1    -1         -1
 fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz500         	 101   16   0   775	   -1    -1         -1
 fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz750         	 101   16   0   775	   -1    -1         -1
+fxfxk_POC_fpga_A_8_B_8_ACC_32_MHz1000        	 120   32   0   775	   -1    -1         -1
+fxfxk_POC_fpga_A_8_B_8_ACC_32_MHz250         	 120   32   0   439	   -1    -1         -1
+fxfxk_POC_fpga_A_8_B_8_ACC_32_MHz500         	 120   32   0   775	   -1    -1         -1
+fxfxk_POC_fpga_A_8_B_8_ACC_32_MHz750         	 120   32   0   775	   -1    -1         -1
