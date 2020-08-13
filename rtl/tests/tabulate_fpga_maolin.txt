@@ -1,36 +1,36 @@
 Experiment name                              	 LUT  Reg DSP  freq	 area  freq    Pow(nW)
 
-fff_fpga_A_5_10_B_5_10_ACC_5_10_MHz1000      	 506  152   0   528	   -1    -1         -1
+fff_fpga_A_5_10_B_5_10_ACC_5_10_MHz1000      	 506  152   0    -2	   -1    -1         -1
 fff_fpga_A_5_10_B_5_10_ACC_5_10_MHz250       	 477  152   0   338	   -1    -1         -1
 fff_fpga_A_5_10_B_5_10_ACC_5_10_MHz500       	 508  152   0   520	   -1    -1         -1
-fff_fpga_A_5_10_B_5_10_ACC_5_10_MHz750       	 508  152   0   539	   -1    -1         -1
-fff_scyc_fpga_A_5_10_B_5_10_ACC_5_10_MHz1000 	 612   16   0   775	   -1    -1         -1
+fff_fpga_A_5_10_B_5_10_ACC_5_10_MHz750       	 508  152   0    -2	   -1    -1         -1
+fff_scyc_fpga_A_5_10_B_5_10_ACC_5_10_MHz1000 	 612   16   0    -2	   -1    -1         -1
 fff_scyc_fpga_A_5_10_B_5_10_ACC_5_10_MHz250  	 612   16   0   439	   -1    -1         -1
 fff_scyc_fpga_A_5_10_B_5_10_ACC_5_10_MHz500  	 612   16   0   775	   -1    -1         -1
 fff_scyc_fpga_A_5_10_B_5_10_ACC_5_10_MHz750  	 612   16   0   775	   -1    -1         -1
 
 
-fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz1000         	 419  152   0   449	   -1    -1         -1
+fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz1000         	 419  152   0    -2	   -1    -1         -1
 fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz250          	 401  152   0   346	   -1    -1         -1
-fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz500          	 423  152   0   423	   -1    -1         -1
-fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz750          	 419  152   0   459	   -1    -1         -1
-fff_scyc_fpga_A_8_7_B_8_7_ACC_8_7_MHz1000    	 427   16   0   775	   -1    -1         -1
+fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz500          	 423  152   0    -2	   -1    -1         -1
+fff_fpga_A_8_7_B_8_7_ACC_8_7_MHz750          	 419  152   0    -2	   -1    -1         -1
+fff_scyc_fpga_A_8_7_B_8_7_ACC_8_7_MHz1000    	 427   16   0    -2	   -1    -1         -1
 fff_scyc_fpga_A_8_7_B_8_7_ACC_8_7_MHz250     	 427   16   0   439	   -1    -1         -1
 fff_scyc_fpga_A_8_7_B_8_7_ACC_8_7_MHz500     	 427   16   0   775	   -1    -1         -1
 fff_scyc_fpga_A_8_7_B_8_7_ACC_8_7_MHz750     	 427   16   0   775	   -1    -1         -1
 
 
-fxfxk_POC_fpga_A_16_B_16_ACC_32_MHz1000      	 345   32   0   775	   -1    -1         -1
+fxfxk_POC_fpga_A_16_B_16_ACC_32_MHz1000      	 345   32   0    -2	   -1    -1         -1
 fxfxk_POC_fpga_A_16_B_16_ACC_32_MHz250       	 345   32   0   439	   -1    -1         -1
 fxfxk_POC_fpga_A_16_B_16_ACC_32_MHz500       	 345   32   0   775	   -1    -1         -1
 fxfxk_POC_fpga_A_16_B_16_ACC_32_MHz750       	 345   32   0   775	   -1    -1         -1
 
-fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz1000        	 101   16   0   775	   -1    -1         -1
+fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz1000        	 101   16   0    -2	   -1    -1         -1
 fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz250         	 101   16   0   439	   -1    -1         -1
 fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz500         	 101   16   0   775	   -1    -1         -1
 fxfxk_POC_fpga_A_8_B_8_ACC_16_MHz750         	 101   16   0   775	   -1    -1         -1
 
-fxfxk_POC_fpga_A_8_B_8_ACC_32_MHz1000        	 120   32   0   775	   -1    -1         -1
+fxfxk_POC_fpga_A_8_B_8_ACC_32_MHz1000        	 120   32   0    -2	   -1    -1         -1
 fxfxk_POC_fpga_A_8_B_8_ACC_32_MHz250         	 120   32   0   439	   -1    -1         -1
 fxfxk_POC_fpga_A_8_B_8_ACC_32_MHz500         	 120   32   0   775	   -1    -1         -1
 fxfxk_POC_fpga_A_8_B_8_ACC_32_MHz750         	 120   32   0   775	   -1    -1         -1
@@ -39,11 +39,11 @@ fxfxk_POC_fpga_A_8_B_8_ACC_32_MHz750         	 120   32   0   775	   -1    -1   
 
 #https://papers.nips.cc/paper/8736-hybrid-8-bit-floating-point-hfp8-training-and-inference-for-deep-neural-networks.pdf
 # 1,4,3 x 1,4,3 + 1,6,9
-fff_fpga_A_4_3_B_4_3_ACC_6_9_MHz1000         	 395  140   0   554	   -1    -1         -1
+fff_fpga_A_4_3_B_4_3_ACC_6_9_MHz1000         	 395  140   0    -2	   -1    -1         -1
 fff_fpga_A_4_3_B_4_3_ACC_6_9_MHz250          	 372  140   0   370	   -1    -1         -1
 fff_fpga_A_4_3_B_4_3_ACC_6_9_MHz500          	 402  140   0   506	   -1    -1         -1
-fff_fpga_A_4_3_B_4_3_ACC_6_9_MHz750          	 399  140   0   541	   -1    -1         -1
-fff_scyc_fpga_A_4_3_B_4_3_ACC_6_9_MHz1000    	 406   16   0   775	   -1    -1         -1
+fff_fpga_A_4_3_B_4_3_ACC_6_9_MHz750          	 399  140   0    -2	   -1    -1         -1
+fff_scyc_fpga_A_4_3_B_4_3_ACC_6_9_MHz1000    	 406   16   0    -2	   -1    -1         -1
 fff_scyc_fpga_A_4_3_B_4_3_ACC_6_9_MHz250     	 406   16   0   439	   -1    -1         -1
 fff_scyc_fpga_A_4_3_B_4_3_ACC_6_9_MHz500     	 406   16   0   775	   -1    -1         -1
 fff_scyc_fpga_A_4_3_B_4_3_ACC_6_9_MHz750     	 406   16   0   775	   -1    -1         -1
@@ -51,11 +51,11 @@ fff_scyc_fpga_A_4_3_B_4_3_ACC_6_9_MHz750     	 406   16   0   775	   -1    -1   
 
 #https://arxiv.org/pdf/1812.08011.pdf
 # 1,5,2 x 1,5,2 + 1,5,10
-fff_fpga_A_5_2_B_5_2_ACC_5_10_MHz1000        	 362  136   0   556	   -1    -1         -1
+fff_fpga_A_5_2_B_5_2_ACC_5_10_MHz1000        	 362  136   0    -2	   -1    -1         -1
 fff_fpga_A_5_2_B_5_2_ACC_5_10_MHz250         	 350  136   0   371	   -1    -1         -1
 fff_fpga_A_5_2_B_5_2_ACC_5_10_MHz500         	 374  136   0   515	   -1    -1         -1
-fff_fpga_A_5_2_B_5_2_ACC_5_10_MHz750         	 366  136   0   554	   -1    -1         -1
-fff_scyc_fpga_A_5_2_B_5_2_ACC_5_10_MHz1000   	 444   16   0   775	   -1    -1         -1
+fff_fpga_A_5_2_B_5_2_ACC_5_10_MHz750         	 366  136   0    -2	   -1    -1         -1
+fff_scyc_fpga_A_5_2_B_5_2_ACC_5_10_MHz1000   	 444   16   0    -2	   -1    -1         -1
 fff_scyc_fpga_A_5_2_B_5_2_ACC_5_10_MHz250    	 444   16   0   439	   -1    -1         -1
 fff_scyc_fpga_A_5_2_B_5_2_ACC_5_10_MHz500    	 444   16   0   775	   -1    -1         -1
 fff_scyc_fpga_A_5_2_B_5_2_ACC_5_10_MHz750    	 444   16   0   775	   -1    -1         -1
@@ -63,11 +63,11 @@ fff_scyc_fpga_A_5_2_B_5_2_ACC_5_10_MHz750    	 444   16   0   775	   -1    -1   
 
 #https://arxiv.org/pdf/2001.05674.pdf
 # 1,5,2 x 1,5,2 + 1,8,23
-fff_fpga_A_5_2_B_5_2_ACC_8_23_MHz1000        	 886  238   0   425	   -1    -1         -1
+fff_fpga_A_5_2_B_5_2_ACC_8_23_MHz1000        	 886  238   0    -2	   -1    -1         -1
 fff_fpga_A_5_2_B_5_2_ACC_8_23_MHz250         	 867  238   0   320	   -1    -1         -1
-fff_fpga_A_5_2_B_5_2_ACC_8_23_MHz500         	 897  238   0   418	   -1    -1         -1
-fff_fpga_A_5_2_B_5_2_ACC_8_23_MHz750         	 889  238   0   429	   -1    -1         -1
-fff_scyc_fpga_A_5_2_B_5_2_ACC_8_23_MHz1000   	1015   32   0   775	   -1    -1         -1
+fff_fpga_A_5_2_B_5_2_ACC_8_23_MHz500         	 897  238   0    -2	   -1    -1         -1
+fff_fpga_A_5_2_B_5_2_ACC_8_23_MHz750         	 889  238   0    -2	   -1    -1         -1
+fff_scyc_fpga_A_5_2_B_5_2_ACC_8_23_MHz1000   	1015   32   0    -2	   -1    -1         -1
 fff_scyc_fpga_A_5_2_B_5_2_ACC_8_23_MHz250    	1015   32   0   439	   -1    -1         -1
 fff_scyc_fpga_A_5_2_B_5_2_ACC_8_23_MHz500    	1015   32   0   775	   -1    -1         -1
 fff_scyc_fpga_A_5_2_B_5_2_ACC_8_23_MHz750    	1015   32   0   775	   -1    -1         -1
