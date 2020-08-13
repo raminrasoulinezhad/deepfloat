@@ -74,8 +74,14 @@ def report_impl_wns(file_name, clk_p):
 			# Please check the name of the clock which here is CLK. in many cases it can be clk.
 			#print(line)
 			m = re.match(r"^clock\s+(\-*\d+)\.(\d+)", line)
-			if m:
-				clk = (1000 / (clk_p - float(m.groups()[0] + "." + m.groups()[1])))
+			if clk == -1:
+				if m:
+					clk_s = float(m.groups()[0] + "." + m.groups()[1])
+					print (clk_p,clk_s)
+					if clk_s < 0:
+						clk = -2
+					else:
+						clk = (1000 / (clk_p - clk_s))
 		f_temp.close() 
 		print ('%s is recorded' % (file_name))
 
