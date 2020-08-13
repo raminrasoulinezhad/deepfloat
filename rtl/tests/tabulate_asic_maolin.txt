@@ -1,12 +1,26 @@
 Experiment name                              	 LUT  Reg DSP  freq	 area  freq    Pow(nW)
+
 fff_asic_A_5_10_B_5_10_ACC_5_10_MHz1000      	  -1   -1  -1    -1	 1412  1077    5247973
 fff_asic_A_5_10_B_5_10_ACC_5_10_MHz250       	  -1   -1  -1    -1	 1406  1072    1674299
 fff_asic_A_5_10_B_5_10_ACC_5_10_MHz500       	  -1   -1  -1    -1	 1410  1072    3049495
 fff_asic_A_5_10_B_5_10_ACC_5_10_MHz750       	  -1   -1  -1    -1	 1409  1077    4189308
+fff_scyc_asic_A_5_10_B_5_10_ACC_5_10_MHz1000 	  -1   -1  -1    -1	 1858    -1    4129395
+fff_scyc_asic_A_5_10_B_5_10_ACC_5_10_MHz250  	  -1   -1  -1    -1	 1031   390    1159263
+fff_scyc_asic_A_5_10_B_5_10_ACC_5_10_MHz500  	  -1   -1  -1    -1	 1102   500    1827603
+fff_scyc_asic_A_5_10_B_5_10_ACC_5_10_MHz750  	  -1   -1  -1    -1	 1226   750    2514695
+
+
 fff_asic_A_8_7_B_8_7_ACC_8_7_MHz1000         	  -1   -1  -1    -1	 1165  1766    4616513
 fff_asic_A_8_7_B_8_7_ACC_8_7_MHz250          	  -1   -1  -1    -1	 1158  1503    1325713
 fff_asic_A_8_7_B_8_7_ACC_8_7_MHz500          	  -1   -1  -1    -1	 1156  1474    2479426
 fff_asic_A_8_7_B_8_7_ACC_8_7_MHz750          	  -1   -1  -1    -1	 1165  1766    3589945
+
+fff_scyc_asic_A_8_7_B_8_7_ACC_8_7_MHz1000    	  -1   -1  -1    -1	 1135  1000    2449277
+fff_scyc_asic_A_8_7_B_8_7_ACC_8_7_MHz250     	  -1   -1  -1    -1	  751   448     669069
+fff_scyc_asic_A_8_7_B_8_7_ACC_8_7_MHz500     	  -1   -1  -1    -1	  769   500    1150231
+fff_scyc_asic_A_8_7_B_8_7_ACC_8_7_MHz750     	  -1   -1  -1    -1	  835   750    1555425
+
+
 fxfxk_POC_asic_A_16_B_16_ACC_32_MHz1000      	  -1   -1  -1    -1	  903  1001    2864695
 fxfxk_POC_asic_A_16_B_16_ACC_32_MHz250       	  -1   -1  -1    -1	  838   792    1147154
 fxfxk_POC_asic_A_16_B_16_ACC_32_MHz500       	  -1   -1  -1    -1	  838   792    1844627
@@ -20,12 +34,21 @@ fxfxk_POC_asic_A_8_B_8_ACC_32_MHz250         	  -1   -1  -1    -1	  417   790   
 fxfxk_POC_asic_A_8_B_8_ACC_32_MHz500         	  -1   -1  -1    -1	  417   790     939536
 fxfxk_POC_asic_A_8_B_8_ACC_32_MHz750         	  -1   -1  -1    -1	  417   790    1269289
 
+
+
+
 #https://papers.nips.cc/paper/8736-hybrid-8-bit-floating-point-hfp8-training-and-inference-for-deep-neural-networks.pdf
 # 1,4,3 x 1,4,3 + 1,6,9
 fff_asic_A_4_3_B_4_3_ACC_6_9_MHz1000         	  -1   -1  -1    -1	 1065  1579    4018181
 fff_asic_A_4_3_B_4_3_ACC_6_9_MHz250          	  -1   -1  -1    -1	 1051  1335    1129278
 fff_asic_A_4_3_B_4_3_ACC_6_9_MHz500          	  -1   -1  -1    -1	 1059  1545    2167791
 fff_asic_A_4_3_B_4_3_ACC_6_9_MHz750          	  -1   -1  -1    -1	 1065  1636    3110758
+
+fff_scyc_asic_A_4_3_B_4_3_ACC_6_9_MHz1000    	  -1   -1  -1    -1	 1209  1000    2253742
+fff_scyc_asic_A_4_3_B_4_3_ACC_6_9_MHz250     	  -1   -1  -1    -1	  743   479     593391
+fff_scyc_asic_A_4_3_B_4_3_ACC_6_9_MHz500     	  -1   -1  -1    -1	  746   544    1012549
+fff_scyc_asic_A_4_3_B_4_3_ACC_6_9_MHz750     	  -1   -1  -1    -1	  830   750    1450756
+
 
 #https://arxiv.org/pdf/2001.05674.pdf
 # 1,5,2 x 1,5,2 + 1,8,23
@@ -34,9 +57,21 @@ fff_asic_A_5_2_B_5_2_ACC_8_23_MHz250         	  -1   -1  -1    -1	 1976  1013   
 fff_asic_A_5_2_B_5_2_ACC_8_23_MHz500         	  -1   -1  -1    -1	 1979  1035    3663397
 fff_asic_A_5_2_B_5_2_ACC_8_23_MHz750         	  -1   -1  -1    -1	 1965  1096    5226194
 
+fff_scyc_asic_A_5_2_B_5_2_ACC_8_23_MHz1000   	  -1   -1  -1    -1	 2834    -1    4388509
+fff_scyc_asic_A_5_2_B_5_2_ACC_8_23_MHz250    	  -1   -1  -1    -1	 1407   318    1030733
+fff_scyc_asic_A_5_2_B_5_2_ACC_8_23_MHz500    	  -1   -1  -1    -1	 1520   500    1835160
+fff_scyc_asic_A_5_2_B_5_2_ACC_8_23_MHz750    	  -1   -1  -1    -1	 2017   750    2794090
+
+
 #https://arxiv.org/pdf/1812.08011.pdf
 # 1,5,2 x 1,5,2 + 1,5,10
 fff_asic_A_5_2_B_5_2_ACC_5_10_MHz1000        	  -1   -1  -1    -1	  980  1522    3800979
 fff_asic_A_5_2_B_5_2_ACC_5_10_MHz250         	  -1   -1  -1    -1	  979  1416    1073247
 fff_asic_A_5_2_B_5_2_ACC_5_10_MHz500         	  -1   -1  -1    -1	  986  1569    2019381
 fff_asic_A_5_2_B_5_2_ACC_5_10_MHz750         	  -1   -1  -1    -1	  988  1763    2924615
+
+fff_scyc_asic_A_5_2_B_5_2_ACC_5_10_MHz1000   	  -1   -1  -1    -1	  815  1000    1765817
+fff_scyc_asic_A_5_2_B_5_2_ACC_5_10_MHz250    	  -1   -1  -1    -1	  657   518     555507
+fff_scyc_asic_A_5_2_B_5_2_ACC_5_10_MHz500    	  -1   -1  -1    -1	  660   562     937688
+fff_scyc_asic_A_5_2_B_5_2_ACC_5_10_MHz750    	  -1   -1  -1    -1	  726   750    1301537
+
