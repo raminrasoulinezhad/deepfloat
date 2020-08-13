@@ -19,3 +19,24 @@ fxfxk_POC_asic_A_8_B_8_ACC_32_MHz1000        	  -1   -1  -1    -1	  455  1001   
 fxfxk_POC_asic_A_8_B_8_ACC_32_MHz250         	  -1   -1  -1    -1	  417   790     541583
 fxfxk_POC_asic_A_8_B_8_ACC_32_MHz500         	  -1   -1  -1    -1	  417   790     939536
 fxfxk_POC_asic_A_8_B_8_ACC_32_MHz750         	  -1   -1  -1    -1	  417   790    1269289
+
+#https://papers.nips.cc/paper/8736-hybrid-8-bit-floating-point-hfp8-training-and-inference-for-deep-neural-networks.pdf
+# 1,4,3 x 1,4,3 + 1,6,9
+fff_asic_A_4_3_B_4_3_ACC_6_9_MHz1000         	  -1   -1  -1    -1	 1065  1579    4018181
+fff_asic_A_4_3_B_4_3_ACC_6_9_MHz250          	  -1   -1  -1    -1	 1051  1335    1129278
+fff_asic_A_4_3_B_4_3_ACC_6_9_MHz500          	  -1   -1  -1    -1	 1059  1545    2167791
+fff_asic_A_4_3_B_4_3_ACC_6_9_MHz750          	  -1   -1  -1    -1	 1065  1636    3110758
+
+#https://arxiv.org/pdf/2001.05674.pdf
+# 1,5,2 x 1,5,2 + 1,8,23
+fff_asic_A_5_2_B_5_2_ACC_8_23_MHz1000        	  -1   -1  -1    -1	 1972  1096    6714705
+fff_asic_A_5_2_B_5_2_ACC_8_23_MHz250         	  -1   -1  -1    -1	 1976  1013    1907886
+fff_asic_A_5_2_B_5_2_ACC_8_23_MHz500         	  -1   -1  -1    -1	 1979  1035    3663397
+fff_asic_A_5_2_B_5_2_ACC_8_23_MHz750         	  -1   -1  -1    -1	 1965  1096    5226194
+
+#https://arxiv.org/pdf/1812.08011.pdf
+# 1,5,2 x 1,5,2 + 1,5,10
+fff_asic_A_5_2_B_5_2_ACC_5_10_MHz1000        	  -1   -1  -1    -1	  980  1522    3800979
+fff_asic_A_5_2_B_5_2_ACC_5_10_MHz250         	  -1   -1  -1    -1	  979  1416    1073247
+fff_asic_A_5_2_B_5_2_ACC_5_10_MHz500         	  -1   -1  -1    -1	  986  1569    2019381
+fff_asic_A_5_2_B_5_2_ACC_5_10_MHz750         	  -1   -1  -1    -1	  988  1763    2924615
