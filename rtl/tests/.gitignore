@@ -6,4 +6,5 @@ paper_asic_auto/
 fv/
 rc*
 vivado*
+.Xil/
 
