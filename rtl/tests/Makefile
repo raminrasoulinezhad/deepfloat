@@ -118,7 +118,7 @@ PaperIntegerSystolicGrid_asic:
 	#PaperIntegerSystolicGrid
 	rm -rf $(addr)
 	mkdir $(addr)
-	cd $(addr) && rc -f ../../PaperIntegerSystolicGrid_asic.tcl -ex "array set paramters [list a_s $(a_b_s) acc_d $(acc_d) period $(period) tile $(tile)]" -E 
+	cd $(addr) && rc -f ../../PaperIntegerSystolicGrid_asic.tcl -ex "array set paramters [list a_b_s $(a_b_s) acc_d $(acc_d) period $(period) tile $(tile)]" -E 
 
 # These commands are provided for asic. not for fpga side. It's a TODO
 fxfxMult_POC_asic:
