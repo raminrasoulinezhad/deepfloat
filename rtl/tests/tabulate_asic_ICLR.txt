@@ -6,3 +6,4 @@ SystolicGrid_ffk_asic_A_2_3_B_2_3_ACC_20_tile_32_MHz750     	  -1   -1  -1    -1
 SystolicGrid_ffk_asic_A_2_3_B_2_3_ACC_20_tile_8_MHz750      	  -1   -1  -1    -1	 8142  1278   61238311
 SystolicGrid_ffk_asic_A_2_5_B_2_5_ACC_31_tile_16_MHz750     	  -1   -1  -1    -1	49238  1194  373159203
 SystolicGrid_ffk_asic_A_2_5_B_2_5_ACC_31_tile_32_MHz750     	  -1   -1  -1    -1	   -1    -1         -1
+SystolicGrid_ffk_asic_A_2_5_B_2_5_ACC_31_tile_8_MHz750      	  -1   -1  -1    -1	11991  1194   90555075
