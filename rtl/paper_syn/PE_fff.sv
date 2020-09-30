@@ -22,7 +22,27 @@ module PE_fff #(parameter EXP_IN_A=3,
    localparam W_B = EXP_IN_B + FRAC_IN_B;
    localparam W_OUT = EXP_OUT + FRAC_OUT;
 
+   Float #(.EXP(EXP_IN_A), .FRAC(FRAC_IN_A)) aIn_inf();
+   Float #(.EXP(EXP_IN_B), .FRAC(FRAC_IN_B)) bIn_inf();
+   Float #(.EXP(EXP_OUT), .FRAC(FRAC_OUT)) cOut_inf();
+
+   assign aIn_inf.data.sign = aIn[EXP_IN_A+FRAC_IN_A];
+   assign aIn_inf.data.exponent = aIn[EXP_IN_A+FRAC_IN_A-1:FRAC_IN_A];
+   assign aIn_inf.data.fraction = aIn[FRAC_IN_A-1:0];
+
+   assign bIn_inf.data.sign = bIn[EXP_IN_B+FRAC_IN_B];
+   assign bIn_inf.data.exponent = bIn[EXP_IN_B+FRAC_IN_B-1:FRAC_IN_B];
+   assign bIn_inf.data.fraction = bIn[FRAC_IN_B-1:0];
+
+   assign cOut_inf.data.sign = cOut[EXP_OUT+FRAC_OUT];
+   assign cOut_inf.data.exponent = cOut[EXP_OUT+FRAC_OUT-1:FRAC_OUT];
+   assign cOut_inf.data.fraction = cOut[FRAC_OUT-1:0];
+
   logic [EXP_OUT+FRAC_OUT:0] cNew;
+  Float #(.EXP(EXP_OUT), .FRAC(FRAC_OUT)) cNew_inf();
+  assign cNew[EXP_OUT+FRAC_OUT] = cNew_inf.data.sign;
+  assign cNew[EXP_OUT+FRAC_OUT-1:FRAC_OUT] = cNew_inf.data.exponent;
+  assign cNew[FRAC_OUT-1:0] = cNew_inf.data.fraction;
 
   FloatMultiplyAddWithFloat #( .EXP_IN_A(EXP_IN_A),
                                .FRAC_IN_A(FRAC_IN_A),
@@ -32,10 +52,10 @@ module PE_fff #(parameter EXP_IN_A=3,
                                .EXP_OUT(EXP_OUT),
                                .FRAC_OUT(FRAC_OUT),
                                .OVERFLOW_DETECTION(OVERFLOW_DETECTION))
-  pe(.a(aIn),
-     .b(bIn),
-     .accIn(cOut),
-     .accOut(cNew),
+  pe(.a(aIn_inf),
+     .b(bIn_inf),
+     .accIn(cOut_inf),
+     .accOut(cNew_inf),
 
      .reset(reset),
      .clock(clock));
