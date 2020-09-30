@@ -216,7 +216,7 @@ if __name__ == "__main__":
 
 	main_dir = args.dir 	#"./paper/"
 	
-	f.write("%-45s\t%4s %4s %3s %5s\t%5s %5s %10s\n" % ("Experiment name", "LUT", "Reg", "DSP", "freq", "area", "freq", "Pow(nW)"))
+	f.write("%-60s\t%4s %4s %3s %5s\t%5s %5s %10s\n" % ("Experiment name", "LUT", "Reg", "DSP", "freq", "area", "freq", "Pow(nW)"))
 	for exp_dir in np.sort(os.listdir(main_dir)):
 		if exp_dir in ["answers", "files"]:
 			continue 
@@ -262,7 +262,7 @@ if __name__ == "__main__":
 			file_name = extract_asic_file_name(main_dir + exp_dir, "power")
 			power_leakage, power_dynamic, power_total = report_asic_power(file_name)
 
-			f.write("%-45s\t%4d %4d %3d %5d\t%5d %5d %10d\n" % (exp_dir, LUT, Reg, DSP, clk_fpga, area_asic, clk_asic, int(power_total)))
+			f.write("%-60s\t%4d %4d %3d %5d\t%5d %5d %10d\n" % (exp_dir, LUT, Reg, DSP, clk_fpga, area_asic, clk_asic, int(power_total)))
 		
 	f.close() 
 

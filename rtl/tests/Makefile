@@ -56,6 +56,13 @@ ktf_fpga:
 	vivado -mode batch -source ktf_fpga.tcl -tclargs $(addr) $(acc_d) $(acc_f) $(f_e) $(f_f) $(part) $(cons)
 	rm -rf vivado*
 
+
+SystolicGrid_ffk_fpga:
+	#SystolicGrid_ffk
+	rm -rf $(addr)
+	vivado -mode batch -source SystolicGrid_ffk_fpga.tcl -tclargs $(addr) $(a_e) $(a_f) $(b_e) $(b_f) $(acc_d) $(part) $(cons) $(tile)
+	rm -rf vivado*
+
 #################
 ## ASIC tests
 #################
@@ -100,6 +107,12 @@ ktf_asic:
 	rm -rf $(addr)
 	mkdir $(addr)
 	cd $(addr) && rc -f ../../ktf_asic.tcl -ex "array set paramters [list acc_d $(acc_d) acc_f $(acc_f) f_e $(f_e) f_f $(f_f) period $(period)]" -E 
+
+SystolicGrid_ffk_asic:
+	#SystolicGrid_ffk
+	rm -rf $(addr)
+	mkdir $(addr)
+	cd $(addr) && rc -f ../../SystolicGrid_ffk_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_d $(acc_d) period $(period) tile $(tile)]" -E
 
 # These commands are provided for asic. not for fpga side. It's a TODO
 fxfxMult_POC_asic:
