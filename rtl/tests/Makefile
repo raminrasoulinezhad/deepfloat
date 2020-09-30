@@ -114,6 +114,12 @@ SystolicGrid_ffk_asic:
 	mkdir $(addr)
 	cd $(addr) && rc -f ../../SystolicGrid_ffk_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_d $(acc_d) period $(period) tile $(tile)]" -E
 
+SystolicGrid_fff_asic:
+	#SystolicGrid_fff
+	rm -rf $(addr)
+	mkdir $(addr)
+	cd $(addr) && rc -f ../../SystolicGrid_fff_asic.tcl -ex "array set paramters [list a_e $(a_e) a_f $(a_f) b_e $(b_e) b_f $(b_f) acc_e $(acc_e) acc_f $(acc_f) period $(period) tile $(tile)]" -E
+
 PaperIntegerSystolicGrid_asic:
 	#PaperIntegerSystolicGrid
 	rm -rf $(addr)
