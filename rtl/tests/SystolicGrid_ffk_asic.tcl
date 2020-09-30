@@ -48,7 +48,7 @@ set_attribute information_level 6
 # using: find . -name "*.sv", then rmoving Instances, tests, Debug (utils/DebugFunctions.sv), ../posit/QuireDef_pkg.sv, and all posits
 ## place all packages first (compilation is in order)
 
-set myFiles [list paper_syn/SystolicGrid_ffk.sv  paper_syn/PE_ffk.sv  PiecesOfCakes/FloatMultiplyAdd_POC.sv];
+set myFiles [list paper_syn/SystolicGrid_ffk.sv  paper_syn/PE_ffk.sv  PiecesOfCakes/FloatMultiplyAdd_POC_combinational.sv];
 
 # name of top level module
 set basename SystolicGrid_ffk;
