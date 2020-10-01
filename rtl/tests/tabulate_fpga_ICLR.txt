@@ -1,0 +1,19 @@
+Experiment name                                             	   LUT    Reg DSP   freq	 area  freq    Pow(nW)
+PaperIntegerSystolicGrid_fpga_A_B_8_ACC_32_tile_16_MHz500   	 25384  12032   0     -2	   -1    -1         -1
+PaperIntegerSystolicGrid_fpga_A_B_8_ACC_32_tile_4_MHz500    	  1606    704   0     -2	   -1    -1         -1
+PaperIntegerSystolicGrid_fpga_A_B_8_ACC_32_tile_8_MHz500    	  6371   2944   0     -2	   -1    -1         -1
+SystolicGrid_fff_fpga_A_4_3_B_5_2_ACC_6_9_tile_16_MHz500    	 96986  43776   0     -1	   -1    -1         -1
+SystolicGrid_fff_fpga_A_4_3_B_5_2_ACC_6_9_tile_4_MHz500     	  6374   2736   0     -2	   -1    -1         -1
+SystolicGrid_fff_fpga_A_4_3_B_5_2_ACC_6_9_tile_8_MHz500     	 24240  10944   0     -2	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_3_B_2_3_ACC_20_tile_16_MHz500     	 24769   8000   0     -2	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_3_B_2_3_ACC_20_tile_4_MHz500      	  1558    464   0     -2	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_3_B_2_3_ACC_20_tile_8_MHz500      	  6177   1952   0     -2	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_3_B_3_2_ACC_20_tile_16_MHz500     	 27254   8000   0     -2	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_3_B_3_2_ACC_20_tile_4_MHz500      	  1685    464   0     -2	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_3_B_3_2_ACC_20_tile_8_MHz500      	  6500   1952   0     -2	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_5_B_2_5_ACC_31_tile_16_MHz500     	 37345  11777   0     -2	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_5_B_2_5_ACC_31_tile_4_MHz500      	  2432    688   0     -2	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_5_B_2_5_ACC_31_tile_8_MHz500      	  9892   2880   0     -2	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_5_B_4_3_ACC_31_tile_16_MHz500     	 43688  11776   0     -1	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_5_B_4_3_ACC_31_tile_4_MHz500      	  2712    688   0     -2	   -1    -1         -1
+SystolicGrid_ffk_fpga_A_2_5_B_4_3_ACC_31_tile_8_MHz500      	 10904   2880   0     -2	   -1    -1         -1
