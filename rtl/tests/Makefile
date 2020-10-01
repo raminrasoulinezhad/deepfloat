@@ -63,6 +63,18 @@ SystolicGrid_ffk_fpga:
 	vivado -mode batch -source SystolicGrid_ffk_fpga.tcl -tclargs $(addr) $(a_e) $(a_f) $(b_e) $(b_f) $(acc_d) $(part) $(cons) $(tile)
 	rm -rf vivado*
 
+SystolicGrid_fff_fpga:
+	#SystolicGrid_fff
+	rm -rf $(addr)
+	vivado -mode batch -source SystolicGrid_fff_fpga.tcl -tclargs $(addr) $(a_e) $(a_f) $(b_e) $(b_f) $(acc_e) $(acc_f) $(part) $(cons) $(tile)
+	rm -rf vivado*
+
+PaperIntegerSystolicGrid_fpga:
+	#PaperIntegerSystolicGrid
+	rm -rf $(addr)
+	vivado -mode batch -source PaperIntegerSystolicGrid_fpga.tcl -tclargs $(addr) $(a_b_s) $(acc_d) $(part) $(cons) $(tile)
+	rm -rf vivado*
+
 #################
 ## ASIC tests
 #################
@@ -159,9 +171,9 @@ tabulate:
 ## Cleaners
 #################
 clean_tabulations:
-	rm -rf tabulate_2*.txt
+	rm -rf tabulate_202*.txt
 
 clean:
-	rm -rf vivado* tabulate_*.txt
+	rm -rf vivado* tabulate_202*.txt
 	rm -rf nohup.out
 	rm -rf rc.* *initialtest* fv
