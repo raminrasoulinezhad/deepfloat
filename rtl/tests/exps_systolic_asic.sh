@@ -23,6 +23,7 @@ make PaperIntegerSystolicGrid_asic  addr=./ICLR/PaperIntegerSystolicGrid_asic_A_
 make PaperIntegerSystolicGrid_asic  addr=./ICLR/PaperIntegerSystolicGrid_asic_A_B_8_ACC_32_tile_12_MHz750   a_b_s=8  acc_d=32 period=1333 tile=12
 make PaperIntegerSystolicGrid_asic  addr=./ICLR/PaperIntegerSystolicGrid_asic_A_B_8_ACC_32_tile_10_MHz750   a_b_s=8  acc_d=32 period=1333 tile=10
 make PaperIntegerSystolicGrid_asic  addr=./ICLR/PaperIntegerSystolicGrid_asic_A_B_8_ACC_32_tile_8_MHz750    a_b_s=8  acc_d=32 period=1333 tile=8
+make PaperIntegerSystolicGrid_asic  addr=./ICLR/PaperIntegerSystolicGrid_asic_A_B_8_ACC_32_tile_4_MHz750    a_b_s=8  acc_d=32 period=1333 tile=4
 
 make SystolicGrid_fff_asic  addr=./ICLR/SystolicGrid_fff_asic_A_4_3_B_5_2_ACC_6_9_tile_32_MHz750  a_e=4  a_f=3  b_e=5  b_f=2  acc_e=6   acc_f=9   period=1333 tile=32 
 make SystolicGrid_fff_asic  addr=./ICLR/SystolicGrid_fff_asic_A_4_3_B_5_2_ACC_6_9_tile_16_MHz750  a_e=4  a_f=3  b_e=5  b_f=2  acc_e=6   acc_f=9   period=1333 tile=16 

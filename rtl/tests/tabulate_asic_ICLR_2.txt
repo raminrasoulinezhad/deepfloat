@@ -3,6 +3,7 @@ PaperIntegerSystolicGrid_asic_A_B_8_ACC_32_tile_10_MHz750   	  -1   -1  -1    -1
 PaperIntegerSystolicGrid_asic_A_B_8_ACC_32_tile_12_MHz750   	  -1   -1  -1    -1	65136   765  187507071
 PaperIntegerSystolicGrid_asic_A_B_8_ACC_32_tile_14_MHz750   	  -1   -1  -1    -1	   -1    -1         -1
 PaperIntegerSystolicGrid_asic_A_B_8_ACC_32_tile_16_MHz750   	  -1   -1  -1    -1	   -1    -1         -1
+PaperIntegerSystolicGrid_asic_A_B_8_ACC_32_tile_4_MHz750    	  -1   -1  -1    -1	 7005   765   20253192
 PaperIntegerSystolicGrid_asic_A_B_8_ACC_32_tile_8_MHz750    	  -1   -1  -1    -1	28718   765   82483021
 SystolicGrid_fff_asic_A_4_3_B_5_2_ACC_6_9_tile_16_MHz750    	  -1   -1  -1    -1	   -1    -1         -1
 SystolicGrid_fff_asic_A_4_3_B_5_2_ACC_6_9_tile_32_MHz750    	  -1   -1  -1    -1	   -1    -1         -1
